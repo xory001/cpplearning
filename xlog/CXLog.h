@@ -154,8 +154,8 @@ namespace xlog
 
     private:
         CLogMgr();
-        CLogMgr(const CLogMgr&) {}
-        CLogMgr& operator = (const CLogMgr&) { return *this; }
+        CLogMgr(const CLogMgr&);
+        CLogMgr& operator = (const CLogMgr&);
     
     private:
         void Init();

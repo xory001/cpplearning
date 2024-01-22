@@ -1,1 +1,6 @@
 .svn
+/cpplearning/Debug/*.obj
+/cpplearning/Debug
+/xlog/Debug
+/xlog/*.user
+/.vs/cpplearning/v16
