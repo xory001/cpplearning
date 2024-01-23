@@ -143,6 +143,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="cpp14\CFunctionExample.cpp" />
+    <ClCompile Include="cpp14\cpp_primer_5th_exercise\CExercise_Chapter_10.cpp" />
+    <ClCompile Include="cpp14\cpp_primer_5th_exercise\CStartExecise.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="cpp14\CGramma.cpp" />
     <ClCompile Include="cpp14\CInitType.cpp" />
@@ -157,6 +159,8 @@
     <ClInclude Include="cpp14\CGramma.h" />
     <ClInclude Include="cpp14\CInitType.h" />
     <ClInclude Include="cpp14\CPointer.h" />
+    <ClInclude Include="cpp14\cpp_primer_5th_exercise\CExercise_Chapter_10.h" />
+    <ClInclude Include="cpp14\cpp_primer_5th_exercise\CStartExecise.h" />
     <ClInclude Include="cpp14\CReference.h" />
     <ClInclude Include="cpp14\CStart.h" />
     <ClInclude Include="cpp14\CSTL.h" />

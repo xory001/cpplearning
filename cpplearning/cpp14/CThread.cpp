@@ -4,8 +4,17 @@
 
 namespace cpp14
 {
+    struct ThreadExecutor {
+        void operator()() { /***/ }
+    };
+
     void InitThread()
     {
+        std::thread trd_1(ThreadExecutor()); // 1) 声明了函数
+        std::thread trd_2(ThreadExecutor{}); // 2) 创建了子线程
+        std::thread trd_3{ ThreadExecutor{} }; // 3)
+
+
         std::thread a;
         
         

@@ -1,5 +1,5 @@
 #include "CStart.h"
-#include "..\inc.h"
+#include "../inc.h"
 #include "CInitType.h"
 #include "CThread.h"
 #include <thread>
@@ -8,11 +8,13 @@
 #include "CPointer.h"
 #include "CReference.h"
 #include "CFunctionExample.h"
+#include "cpp_primer_5th_exercise/CStartExecise.h"
 
 namespace cpp14
 {
     void Start()
     {
+        cpp_primer_5th_exercise::StartExecise();
         InitFunctionExample();
         return;
         InitReference();

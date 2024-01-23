@@ -16,6 +16,9 @@
     <Filter Include="cpp14">
       <UniqueIdentifier>{c7e9c602-e741-4e2d-9fec-89b60cb22cbe}</UniqueIdentifier>
     </Filter>
+    <Filter Include="cpp14\cpp_primer_5th_exercise">
+      <UniqueIdentifier>{dd54e225-6761-4a0a-bbe4-582f7004d7f0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -45,6 +48,12 @@
     <ClCompile Include="cpp14\CFunctionExample.cpp">
       <Filter>cpp14</Filter>
     </ClCompile>
+    <ClCompile Include="cpp14\cpp_primer_5th_exercise\CStartExecise.cpp">
+      <Filter>cpp14\cpp_primer_5th_exercise</Filter>
+    </ClCompile>
+    <ClCompile Include="cpp14\cpp_primer_5th_exercise\CExercise_Chapter_10.cpp">
+      <Filter>cpp14\cpp_primer_5th_exercise</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cpp14\CInitType.h">
@@ -73,6 +82,12 @@
     </ClInclude>
     <ClInclude Include="cpp14\CFunctionExample.h">
       <Filter>cpp14</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp14\cpp_primer_5th_exercise\CStartExecise.h">
+      <Filter>cpp14\cpp_primer_5th_exercise</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp14\cpp_primer_5th_exercise\CExercise_Chapter_10.h">
+      <Filter>cpp14\cpp_primer_5th_exercise</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
