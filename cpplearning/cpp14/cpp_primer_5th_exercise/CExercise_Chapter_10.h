@@ -18,8 +18,9 @@ namespace cpp_primer_5th_exercise
         void StartExcercise_10_3_2(); //lambda
 
         void StartExcercise_10_3_3__10_20();
-        void StartExcercise_10_3_3__10_21();
+        void StartExcercise_10_3_3__10_21(); //return lambda
         void StartExcercise_10_3_4__10_22();
+        void StartExcercise_10_3_4__10_24();
 
     protected:
         void GenerateData();

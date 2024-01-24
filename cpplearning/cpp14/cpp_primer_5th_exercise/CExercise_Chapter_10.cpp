@@ -22,6 +22,7 @@ namespace cpp_primer_5th_exercise
         StartExcercise_10_3_3__10_20();
         StartExcercise_10_3_3__10_21();
         StartExcercise_10_3_4__10_22();
+        StartExcercise_10_3_4__10_24();
     }
 
     void CExercise_Chapter_10::StartExcercise_10_1__10_1()
@@ -89,11 +90,9 @@ namespace cpp_primer_5th_exercise
         std::string::size_type nLength = 5;
         CVecStr::iterator it = std::partition(vecStr.begin(), vecStr.end(), [nLength](const std::string& strWord)->bool { return strWord.length() >= nLength; });
         CVecStr::iterator itStart = vecStr.begin();
-        while (itStart != it)
-        {
-            TRACE_INFO_THIS(*itStart);
-            itStart++;
-        }
+        //std::for_each(itStart, it, [](const std::string& strItem) { TRACE_INFO(strItem); });
+        std::for_each(itStart, it, [](std::string& strItem) { strItem += "_*****"; });  //can change the vector's item value
+        //std::for_each(itStart, it, [](const std::string& strItem) { TRACE_INFO(strItem); });
     }
 
     void CExercise_Chapter_10::StartExcercise_10_3_2()
@@ -119,6 +118,7 @@ namespace cpp_primer_5th_exercise
 
     void CExercise_Chapter_10::StartExcercise_10_3_3__10_21()
     {
+        //first answer
         int nCount = 10;
         auto f = [&nCount]()->bool
         {
@@ -136,6 +136,71 @@ namespace cpp_primer_5th_exercise
         TRACE_INFO_THIS("nCount = " << nCount);
         f();
         TRACE_INFO_THIS("nCount = " << nCount);
+
+        //second answer
+        nCount = 5;
+        auto f1 = [nCount]()->auto
+        {
+            int nVal = nCount;  //nVal will release after f1 called; so if want to hold nCount, do that like 'third answer'
+            return [&nVal]()->bool
+            {
+                TRACE_INFO("nVal = " << nVal); //nVal is unpredictable values
+                if (nVal > 0)
+                {
+                    nVal--;
+                }
+                TRACE_INFO("nVal = " << nVal);
+                return nVal > 0;
+            };
+        };
+
+        auto f1Ret = f1();
+        while (f1Ret())
+        {
+
+        }
+        bool bRet = f1Ret();
+        TRACE_INFO("bRet = " << bRet);
+
+        //third answer
+        nCount = 5;
+        auto f2 = [nCount]()->auto{
+            return [nCount]()mutable->bool //nCount is a copy, change the value, do not affect ::nCount 
+            {
+                if (nCount > 0)
+                {
+                    nCount--;
+                }
+                TRACE_INFO("nCount = " << nCount);
+                return nCount > 0;
+            };
+        };
+        auto f2Ret = f2();
+        while ( f2Ret() )
+        {
+
+        }
+        bRet = f2Ret();
+        TRACE_INFO("nCount = " << nCount);
+
+        //four answer
+        auto f3 = [nCount]()->auto
+        {
+            int nLocalCount = nCount;
+            return [nLocalCount]()mutable->bool {
+                if (nLocalCount > 0)
+                {
+                    nLocalCount--;
+                }
+                TRACE_INFO("nLocalCount = " << nLocalCount);
+                return nLocalCount > 0;
+            };
+        };
+        auto f3Ret = f3();
+        while ( f3Ret() )
+        {
+
+        }
     }
 
 
@@ -150,6 +215,30 @@ namespace cpp_primer_5th_exercise
         auto f = std::bind(IsWordLess, std::placeholders::_1, nLength);
         int nCount = std::count_if(vecStr.begin(), vecStr.end(), f);
         TRACE_INFO_THIS("nCount = " << nCount);
+    }
+
+    bool check_size( const std::string& strSrc, int nVal )
+    {
+        return (std::string::size_type)nVal > strSrc.length();
+    }
+    void CExercise_Chapter_10::StartExcercise_10_3_4__10_24()
+    {
+        CVecInt vecInt = GetInt();
+        std::sort(vecInt.begin(), vecInt.end());
+        //std::sort(vecInt.begin(), vecInt.end(), [](int a, int b) {return a > b; });
+        auto it = std::unique(vecInt.begin(), vecInt.end());
+        vecInt.erase(it, vecInt.end());
+        std::string strOrg = "1323fafsafasfas24";
+        auto f = std::bind(check_size, strOrg, std::placeholders::_1);
+        CVecInt::iterator it1 = std::find_if(vecInt.begin(), vecInt.end(), f);
+        if ( it1 != vecInt.end() )
+        {
+            TRACE_INFO_THIS("val is " << *it1);
+        }
+        else
+        {
+            TRACE_INFO_THIS("no val find");
+        }
     }
 
     void CExercise_Chapter_10::GenerateData()

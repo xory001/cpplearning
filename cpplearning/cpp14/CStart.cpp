@@ -15,6 +15,7 @@ namespace cpp14
     void Start()
     {
         cpp_primer_5th_exercise::StartExecise();
+        StartGramma();
         InitFunctionExample();
         return;
         InitReference();
@@ -22,7 +23,7 @@ namespace cpp14
         InitThread();
         InitType(); //value init & default init
         InitPointer();
-        CGramma_Test();
+        
         CSTL_Init();
     }
 }
