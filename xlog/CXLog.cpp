@@ -4,7 +4,7 @@
 #include <string.h>
 #include <iomanip>
 #include "CXLog.h"
-
+#include <process.h>
 
 #define DAY_MILLISECONDS  (24*60*60*1000)
 
@@ -18,13 +18,18 @@ xlog::CLogMgr::CLogMgr()
 
 xlog::CLogMgr::~CLogMgr()
 {
-
+    m_bThradExit = true;
+    WaitForSingleObject( m_hThreadWrite, 500 );
+    m_hThreadWrite = NULL;
 }
 
 void xlog::CLogMgr::Init()
 {
     ClearHistoryLogFile();
     InitializeCriticalSection(&m_cs);
+    m_hThreadWrite = INVALID_HANDLE_VALUE;
+    m_bThradExit = false;
+
     time_t timeVal = time(NULL);
     struct tm* tmVar = localtime(&timeVal);
 
@@ -40,7 +45,7 @@ void xlog::CLogMgr::Init()
 #ifndef _DEBUG
     m_arrLogCfg[X_LOG_LEVEL_DEBUG].bToFile = FALSE;
 #endif
-
+    m_hThreadWrite = (HANDLE)_beginthreadex( NULL, 0, ThreadWrite, this, 0, NULL );
 }
 
 void xlog::CLogMgr::SetConfig(const std::string& strConfigFileName)
@@ -118,7 +123,11 @@ void xlog::CLogMgr::Write(X_LOG_LEVEL level, const std::string& strLog)
     }
     if ( m_arrLogCfg[level].bToFile && m_arrLogCfg[X_LOG_LEVEL_ALL].bToFile )
     {
-        Write2File(level, strLog);
+        CLogItem *pItem = new CLogItem;
+        pItem->level = level;
+        pItem->strLog = strLog;
+        m_vecLogItem.push_back( pItem );
+        //Write2File(level, strLog);
     }
      
     LeaveCriticalSection(&m_cs);
@@ -303,5 +312,30 @@ void xlog::CLogMgr::ClearHistoryLogFile()
     }
     while ( FindNextFileA( hFind, &wfd ) );
     FindClose(hFind);
+}
+
+UINT _stdcall xlog::CLogMgr::ThreadWrite(void* pVoid)
+{
+    CLogMgr* pThis = (CLogMgr*)pVoid;
+    std::vector<CLogItem*> veclogItem;
+    while ( !pThis->m_bThradExit )
+    {
+        EnterCriticalSection( &pThis->m_cs );
+        if ( !pThis->m_vecLogItem.empty() )
+        {
+           veclogItem.swap( pThis->m_vecLogItem );
+           pThis->m_vecLogItem.clear();
+        }
+        LeaveCriticalSection( &pThis->m_cs );
+
+        for ( std::vector<CLogItem*>::iterator it = veclogItem.begin(); it != veclogItem.end(); it++ )
+        {
+             pThis->Write2File( (*it)->level, (*it)->strLog );
+             delete *it;
+        }
+        veclogItem.clear();
+        Sleep( 1 );
+    }
+    return 0;
 }
 

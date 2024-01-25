@@ -5,6 +5,7 @@
 #include <time.h>
 #include <iostream>
 #include <map>
+#include <vector>
 
 
 #ifdef DBASE_EXPORTS
@@ -143,7 +144,8 @@ namespace xlog
     public:
         ~CLogMgr();
         DBASE_EXPORT_API static CLogMgr* Inst() { return m_pInst; }
-        //static void Release() {}
+        DBASE_EXPORT_API static void Release() { delete m_pInst; m_pInst = NULL;}
+
     public:
         DBASE_EXPORT_API virtual void Write(X_LOG_LEVEL level, const std::string& strLog);
 
@@ -156,6 +158,13 @@ namespace xlog
         CLogMgr();
         CLogMgr(const CLogMgr&);
         CLogMgr& operator = (const CLogMgr&);
+
+    private:
+        class CLogItem{
+        public:
+            X_LOG_LEVEL level;
+            std::string strLog;
+        };
     
     private:
         void Init();
@@ -164,12 +173,16 @@ namespace xlog
         void CheckLogFile(X_LOG_LEVEL level);
         void OpenLogFile(X_LOG_LEVEL level);
         void ClearHistoryLogFile();
+        static UINT _stdcall ThreadWrite( void* pVoid );
+        std::vector<CLogItem*> m_vecLogItem;
 
     private:
         static CLogMgr* m_pInst;
         CRITICAL_SECTION m_cs;
         CMapLogCfg m_mapLogCfg;
         CLogCfg m_arrLogCfg[X_LOG_LEVEL_MAX];
+        HANDLE  m_hThreadWrite;
+        bool    m_bThradExit;
     };
 
 
