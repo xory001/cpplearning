@@ -8,7 +8,7 @@
 #include <vector>
 
 
-#ifdef DBASE_EXPORTS
+#ifdef XLOG_EXPORTS
 #define DBASE_EXPORT_API __declspec(dllexport)
 #else
 #define DBASE_EXPORT_API __declspec(dllimport)
@@ -108,7 +108,7 @@ namespace xlog
         BOOL bToFile;
         BOOL bSeparateFile;
         int nMaxFileSize;
-        int nCurrentFileSize;
+        size_t nCurrentFileSize;
         int nMaxIndex;
         int nCurrentIndex;
         int nCurrentDay;
@@ -181,7 +181,7 @@ namespace xlog
         CRITICAL_SECTION m_cs;
         CMapLogCfg m_mapLogCfg;
         CLogCfg m_arrLogCfg[X_LOG_LEVEL_MAX];
-        HANDLE  m_hThreadWrite;
+        HANDLE m_hThreadWrite;
         bool    m_bThradExit;
     };
 
@@ -245,7 +245,7 @@ namespace xlog
         template <>
         inline CWriter& operator << (const wchar_t* lpwInfo)
         {
-            int nLen = wcslen(lpwInfo) + 1;
+            int nLen = (int)wcslen(lpwInfo) + 1;
             int nBytes = ::WideCharToMultiByte(CP_ACP, 0, lpwInfo, nLen, NULL, 0, NULL, NULL);
             char* szBuf = new char[nBytes];
             memset(szBuf, 0, nBytes);

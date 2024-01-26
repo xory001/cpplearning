@@ -144,7 +144,7 @@ void xlog::CLogMgr::Write2File(X_LOG_LEVEL level, const std::string& strLog)
 
     if ( m_arrLogCfg[level].pFile )
     {
-        int nBytesWrite = fwrite(strLog.c_str(), 1, strLog.length(), m_arrLogCfg[level].pFile);
+        size_t nBytesWrite = fwrite(strLog.c_str(), 1, strLog.length(), m_arrLogCfg[level].pFile);
         fflush(m_arrLogCfg[level].pFile);
         m_arrLogCfg[level].nCurrentFileSize += nBytesWrite;
         if (m_arrLogCfg[level].nCurrentFileSize > m_arrLogCfg[level].nMaxFileSize )
@@ -235,7 +235,7 @@ void xlog::CLogMgr::OpenLogFile(X_LOG_LEVEL level)
 
 void xlog::CLogMgr::ClearHistoryLogFile()
 {
-    char szAppName[32] = {0};
+    std::string strAppName;
     char szBuf[MAX_PATH] = {0};
     int nSize = GetModuleFileNameA( NULL, szBuf, MAX_PATH  - 1 );
     char* pszTrailingSlash = strrchr( szBuf, '\\' );
@@ -243,8 +243,7 @@ void xlog::CLogMgr::ClearHistoryLogFile()
     {
         *pszTrailingSlash = 0;
         pszTrailingSlash++;
-        int nBytesCopy = strlen( pszTrailingSlash ) > 31 ? 31 : strlen( pszTrailingSlash ); //app name  has ".exe"
-        strncpy( szAppName, pszTrailingSlash, nBytesCopy - 4 );
+        strAppName.assign(pszTrailingSlash);
     }
 
     WIN32_FIND_DATAA wfd;
@@ -268,17 +267,16 @@ void xlog::CLogMgr::ClearHistoryLogFile()
     uTimeCurrent.LowPart = ftCurrent.dwLowDateTime;
     uTimeCurrent.HighPart = ftCurrent.dwHighDateTime;
 
-    int nLenAppName = strlen( szAppName );
-    int nMinFileName = nLenAppName + 4; //4: the length of ".log"
+    size_t nMinFileName = strAppName.length() + 4; //4: the length of ".log"
     do
     {
         if ( !( wfd.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY ) )
         {
-            int nLenFileName = strlen( wfd.cFileName );
+            size_t nLenFileName = strlen( wfd.cFileName );
             if ( nLenFileName >= nMinFileName )
             {
                 //{app name}*.log or .log.bak
-                if ( ( 0 == strncmp( szAppName, wfd.cFileName, nLenAppName ) ) )
+                if ( strAppName == wfd.cFileName )
                 {
                     BOOL bLogFile = FALSE;
                     if (  ( 0 == strncmp( wfd.cFileName + strlen( wfd.cFileName ) - 4, ".log", 4 ) )  )
