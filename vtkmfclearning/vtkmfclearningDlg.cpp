@@ -18,6 +18,7 @@
 #include "vtkRenderer.h"
 #include "vtkRenderWindowInteractor.h"  
 #include <vtkWin32OpenGLRenderWindow.h>
+#include <vtkInteractorStyleTrackballCamera.h>
 
 //VTK_MODULE_INIT(vtkRandomGraphSource);
 
@@ -121,7 +122,19 @@ void CVTKMFCLearningDlg::RunVtk()
 	_renWin->AddRenderer(ren1);
 	_renWin->SetSize(300, 300);
 	_renWin->SetParentId(m_hWnd);
-	_renWin->MakeRenderWindowInteractor()->Start();
+
+    vtkRenderWindowInteractor* iren = vtkRenderWindowInteractor::New();
+    iren->SetRenderWindow(_renWin);
+
+    //
+    // By default the vtkRenderWindowInteractor instantiates an instance
+    // of vtkInteractorStyle. vtkInteractorStyle translates a set of events
+    // it observes into operations on the camera, actors, and/or properties
+    // in the vtkRenderWindow associated with the vtkRenderWinodwInteractor.
+    // Here we specify a particular interactor style.
+    vtkInteractorStyleTrackballCamera* style =
+        vtkInteractorStyleTrackballCamera::New();
+    iren->SetInteractorStyle(style);
     //_renWin->MakeRenderWindowInteractor()->Start(); //add by xory,
     //
     // Now we loop over 360 degrees and render the cone each time.

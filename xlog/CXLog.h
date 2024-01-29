@@ -9,9 +9,9 @@
 
 
 #ifdef XLOG_EXPORTS
-#define DBASE_EXPORT_API __declspec(dllexport)
+#define XLOG_EXPORT_API __declspec(dllexport)
 #else
-#define DBASE_EXPORT_API __declspec(dllimport)
+#define XLOG_EXPORT_API __declspec(dllimport)
 #endif
 
 /*  config file content
@@ -133,7 +133,7 @@ namespace xlog
           virtual ~CWriterSink(){}
 
      public:
-         DBASE_EXPORT_API virtual void Write(X_LOG_LEVEL level, const std::string& strLog) = 0;
+         XLOG_EXPORT_API virtual void Write(X_LOG_LEVEL level, const std::string& strLog) = 0;
     };
     
     /// <summary>
@@ -143,15 +143,15 @@ namespace xlog
     {
     public:
         ~CLogMgr();
-        DBASE_EXPORT_API static CLogMgr* Inst() { return m_pInst; }
-        DBASE_EXPORT_API static void Release() { delete m_pInst; m_pInst = NULL;}
+        XLOG_EXPORT_API static CLogMgr* Inst() { return m_pInst; }
+        XLOG_EXPORT_API static void Release() { delete m_pInst; m_pInst = NULL;}
 
     public:
-        DBASE_EXPORT_API virtual void Write(X_LOG_LEVEL level, const std::string& strLog);
+        XLOG_EXPORT_API virtual void Write(X_LOG_LEVEL level, const std::string& strLog);
 
     public:
-        DBASE_EXPORT_API void SetConfig( const std::string& strConfigFileName );  //ansi format
-        DBASE_EXPORT_API void SetGenerateFileNameCallBack(X_LOG_LEVEL level, lpfnGenerateFileName fn );
+        XLOG_EXPORT_API void SetConfig( const std::string& strConfigFileName );  //ansi format
+        XLOG_EXPORT_API void SetGenerateFileNameCallBack(X_LOG_LEVEL level, lpfnGenerateFileName fn );
 
 
     private:
