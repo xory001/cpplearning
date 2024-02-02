@@ -2,6 +2,18 @@
 //
 
 #include <iostream>
+#include "vtkImageData.h"
+#include "vtkImageViewer.h"
+#include "vtkJPEGReader.h"
+//#include "vtkRegressionTestImage.h"
+#include "vtkRenderWindowInteractor.h"
+#include "vtkRenderer.h"
+#include "vtkSmartPointer.h"
+
+#include "../include/vtk_8.2.0_lib.h"
+
+
+int jpgShow();
 
 int main(int argc, char* argv[] )
 {
@@ -12,13 +24,47 @@ int main(int argc, char* argv[] )
     std::cout << "Hello World!\n";
 }
 
-// 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
-// 调试程序: F5 或调试 >“开始调试”菜单
+int jpgShow()
+{
+    std::string filename = "res\\a.jpg";
 
-// 入门使用技巧: 
-//   1. 使用解决方案资源管理器窗口添加/管理文件
-//   2. 使用团队资源管理器窗口连接到源代码管理
-//   3. 使用输出窗口查看生成输出和其他消息
-//   4. 使用错误列表窗口查看错误
-//   5. 转到“项目”>“添加新项”以创建新的代码文件，或转到“项目”>“添加现有项”以将现有代码文件添加到项目
-//   6. 将来，若要再次打开此项目，请转到“文件”>“打开”>“项目”并选择 .sln 文件
+    vtkSmartPointer<vtkJPEGReader> JPEGReader = vtkSmartPointer<vtkJPEGReader>::New();
+
+    // Check the image can be read
+    if (!JPEGReader->CanReadFile(filename.c_str()))
+    {
+        cerr << "CanReadFile failed for " << filename << "\n";
+        return EXIT_FAILURE;
+    }
+
+    // Read the input image
+    JPEGReader->SetFileName(filename.c_str());
+    JPEGReader->Update();
+
+    // Read and display the image properties
+    const char* fileExtensions = JPEGReader->GetFileExtensions();
+    cout << "File xtensions: " << fileExtensions << endl;
+
+    const char* descriptiveName = JPEGReader->GetDescriptiveName();
+    cout << "Descriptive name: " << descriptiveName << endl;
+
+    // Visualize
+    vtkSmartPointer<vtkImageViewer> imageViewer = vtkSmartPointer<vtkImageViewer>::New();
+    imageViewer->SetInputConnection(JPEGReader->GetOutputPort());
+    imageViewer->SetColorWindow(256);
+    imageViewer->SetColorLevel(127.5);
+
+    vtkNew<vtkRenderWindowInteractor> renderWindowInteractor;
+    imageViewer->SetupInteractor(renderWindowInteractor);
+    imageViewer->Render();
+
+    vtkRenderWindow* renWin = imageViewer->GetRenderWindow();
+   // int retVal = vtkRegressionTestImage(renWin);
+  //  if (retVal == vtkRegressionTester::DO_INTERACTOR)
+    {
+        renderWindowInteractor->Start();
+    }
+
+    //return !retVal;
+    return 0;
+}

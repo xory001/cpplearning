@@ -19,7 +19,11 @@ xlog::CLogMgr::CLogMgr()
 xlog::CLogMgr::~CLogMgr()
 {
     m_bThradExit = true;
+    SetEvent(m_hEvent);
     WaitForSingleObject( m_hThreadWrite, 500 );
+    CloseHandle(m_hThreadWrite);
+    CloseHandle(m_hEvent);
+    m_hEvent = INVALID_HANDLE_VALUE;
     m_hThreadWrite = NULL;
 }
 
@@ -29,6 +33,7 @@ void xlog::CLogMgr::Init()
     InitializeCriticalSection(&m_cs);
     m_hThreadWrite = INVALID_HANDLE_VALUE;
     m_bThradExit = false;
+    m_hEvent = CreateEventW(NULL, FALSE, FALSE, L"");
 
     time_t timeVal = time(NULL);
     struct tm* tmVar = localtime(&timeVal);
@@ -127,6 +132,7 @@ void xlog::CLogMgr::Write(X_LOG_LEVEL level, const std::string& strLog)
         pItem->level = level;
         pItem->strLog = strLog;
         m_vecLogItem.push_back( pItem );
+        SetEvent(m_hEvent);
         //Write2File(level, strLog);
     }
      
@@ -318,6 +324,7 @@ UINT _stdcall xlog::CLogMgr::ThreadWrite(void* pVoid)
     std::vector<CLogItem*> veclogItem;
     while ( !pThis->m_bThradExit )
     {
+        WaitForSingleObject(pThis->m_hEvent, INFINITE);
         EnterCriticalSection( &pThis->m_cs );
         if ( !pThis->m_vecLogItem.empty() )
         {
@@ -332,7 +339,6 @@ UINT _stdcall xlog::CLogMgr::ThreadWrite(void* pVoid)
              delete *it;
         }
         veclogItem.clear();
-        Sleep( 1 );
     }
     return 0;
 }

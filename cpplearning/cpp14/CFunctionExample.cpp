@@ -1,5 +1,6 @@
+#include "..\inc.h"
 #include "CFunctionExample.h"
-#include "../inc.h"
+
 
 namespace cpp14
 {

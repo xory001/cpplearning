@@ -28,7 +28,7 @@ namespace cpp_primer_5th_exercise
     void CExercise_Chapter_10::StartExcercise_10_1__10_1()
     {
         std::ifstream file(m_strResNumberFile);
-        if ( !file.bad() )
+        if ( file.is_open() )
         {
             std::vector<int> vecVal;
             vecVal.reserve( 2048 );
@@ -46,11 +46,12 @@ namespace cpp_primer_5th_exercise
 
             TRACE_INFO_THIS("vecVal.size = " << vecVal.size());
             srand(clock());
-            for ( int i = 0; i < 5; i++ )
+
+            for (int i = 0; i < 5; i++)
             {
                 int nIndex = rand() % vecVal.size();
                 int nCount = std::count(vecVal.begin(), vecVal.end(), vecVal.at(nIndex));
-                TRACE_INFO_THIS( vecVal.at(nIndex) << " count is " << nCount );
+                TRACE_INFO_THIS(vecVal.at(nIndex) << " count is " << nCount);
             }
         }
     }
@@ -58,7 +59,7 @@ namespace cpp_primer_5th_exercise
     void CExercise_Chapter_10::StartExcercise_10_1__10_2()
     {
         std::ifstream file(m_strResTextFile);
-        if (!file.bad())
+        if (file.is_open())
         {
             std::vector<std::string> vecVal;
             std::string strLine;
@@ -155,9 +156,14 @@ namespace cpp_primer_5th_exercise
         };
 
         auto f1Ret = f1();
+        nCount = 0;
         while (f1Ret())
         {
-
+            nCount++;
+           if ( nCount >= 5 )
+           {
+               break;
+           }
         }
         bool bRet = f1Ret();
         TRACE_INFO("bRet = " << bRet);

@@ -59,9 +59,6 @@
     <ClInclude Include="cpp14\CInitType.h">
       <Filter>cpp14</Filter>
     </ClInclude>
-    <ClInclude Include="inc.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="cpp14\CThread.h">
       <Filter>cpp14</Filter>
     </ClInclude>
@@ -88,6 +85,9 @@
     </ClInclude>
     <ClInclude Include="cpp14\cpp_primer_5th_exercise\CExercise_Chapter_10.h">
       <Filter>cpp14\cpp_primer_5th_exercise</Filter>
+    </ClInclude>
+    <ClInclude Include="inc.h">
+      <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

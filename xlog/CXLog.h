@@ -183,6 +183,7 @@ namespace xlog
         CLogCfg m_arrLogCfg[X_LOG_LEVEL_MAX];
         HANDLE m_hThreadWrite;
         bool    m_bThradExit;
+        HANDLE  m_hEvent;
     };
 
 
