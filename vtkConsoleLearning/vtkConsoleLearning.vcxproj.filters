@@ -21,9 +21,21 @@
     <ClCompile Include="CFileReader.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="CPointPickerlnteractorStyle.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="jpgDisplay.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CFileReader.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CPointPickerlnteractorStyle.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="inc_examples.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

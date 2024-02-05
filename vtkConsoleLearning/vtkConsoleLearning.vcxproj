@@ -124,6 +124,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -144,10 +145,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CFileReader.cpp" />
+    <ClCompile Include="CPointPickerlnteractorStyle.cpp" />
+    <ClCompile Include="jpgDisplay.cpp" />
     <ClCompile Include="vtkConsoleLearning.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CFileReader.h" />
+    <ClInclude Include="CPointPickerlnteractorStyle.h" />
+    <ClInclude Include="inc_examples.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
