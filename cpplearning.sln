@@ -19,6 +19,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Include", "Include", "{74F6
 		Include\xlog.h = Include\xlog.h
 	EndProjectSection
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VTK_image_picture_develop-example", "VTK_image_picture_develop-example\VTK_image_picture_develop-example.vcxproj", "{F2D43BA5-E9EC-49FC-A37D-DE6613C17764}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -67,6 +69,14 @@ Global
 		{B6727667-1BBC-4000-9816-F0F35B1C74E2}.Release|x64.Build.0 = Release|x64
 		{B6727667-1BBC-4000-9816-F0F35B1C74E2}.Release|x86.ActiveCfg = Release|Win32
 		{B6727667-1BBC-4000-9816-F0F35B1C74E2}.Release|x86.Build.0 = Release|Win32
+		{F2D43BA5-E9EC-49FC-A37D-DE6613C17764}.Debug|x64.ActiveCfg = Debug|x64
+		{F2D43BA5-E9EC-49FC-A37D-DE6613C17764}.Debug|x64.Build.0 = Debug|x64
+		{F2D43BA5-E9EC-49FC-A37D-DE6613C17764}.Debug|x86.ActiveCfg = Debug|Win32
+		{F2D43BA5-E9EC-49FC-A37D-DE6613C17764}.Debug|x86.Build.0 = Debug|Win32
+		{F2D43BA5-E9EC-49FC-A37D-DE6613C17764}.Release|x64.ActiveCfg = Release|x64
+		{F2D43BA5-E9EC-49FC-A37D-DE6613C17764}.Release|x64.Build.0 = Release|x64
+		{F2D43BA5-E9EC-49FC-A37D-DE6613C17764}.Release|x86.ActiveCfg = Release|Win32
+		{F2D43BA5-E9EC-49FC-A37D-DE6613C17764}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
