@@ -14,8 +14,9 @@ void vtkMouseMove(vtkObject* caller, unsigned long eid,
 
 int main(int argc, char* argv[] )
 {
+    PolyDataSourceDisplay();
     //RunPointPickExample();
-    JPGShow();
+    //JPGShow();
     std::cout << "Hello World!\n";
 }
 

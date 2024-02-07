@@ -20,5 +20,7 @@
 #include "vtkActor.h"
 #include "vtkImageActor.h"
 #include "vtkOpenGLImageSliceMapper.h"
+#include "vtkTextSource.h"
 
 int JPGShow();
+int PolyDataSourceDisplay();
