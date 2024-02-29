@@ -5,6 +5,8 @@
 #include <iomanip>
 #include "CXLog.h"
 #include <process.h>
+//for _beginthreadex & _endthreadex & CloseHandle
+//https://learn.microsoft.com/zh-cn/cpp/c-runtime-library/reference/beginthread-beginthreadex?view=msvc-170
 
 #define DAY_MILLISECONDS  (24*60*60*1000)
 
@@ -340,6 +342,7 @@ UINT _stdcall xlog::CLogMgr::ThreadWrite(void* pVoid)
         }
         veclogItem.clear();
     }
+    _endthreadex(0);
     return 0;
 }
 

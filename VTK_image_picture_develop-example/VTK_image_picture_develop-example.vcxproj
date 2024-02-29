@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{f2d43ba5-e9ec-49fc-a37d-de6613c17764}</ProjectGuid>
+    <RootNamespace>VTKimagepicturedevelopexample</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Examples\Appendix\FourViews\main.cpp" />
+    <ClCompile Include="Examples\Appendix\FourViews\MainWindow.cpp" />
+    <ClCompile Include="Examples\Appendix\FourViews\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdCXX\CMakeCXXCompilerId.cpp" />
+    <ClCompile Include="Examples\Appendix\FourViews\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdC\CMakeCCompilerId.c" />
+    <ClCompile Include="Examples\Appendix\FourViews\out\build\x64-Debug\CMakeFiles\ShowIncludes\main.c" />
+    <ClCompile Include="Examples\Appendix\FourViews\vtkBorderSelectionWidget.cpp" />
+    <ClCompile Include="Examples\Appendix\FourViews\vtkCornerChineseAnnotation.cpp" />
+    <ClCompile Include="Examples\Appendix\FourViews\vtkDataSet3DCroppingPlaneCallback.cpp" />
+    <ClCompile Include="Examples\Appendix\FourViews\vtkFreeTypeUtilitiesUnicode.cpp" />
+    <ClCompile Include="Examples\Appendix\FourViews\vtkFTGLChineseCharacterMapper.cpp" />
+    <ClCompile Include="Examples\Appendix\FourViews\vtkImage3DCroppingBoxCallback.cpp" />
+    <ClCompile Include="Examples\Appendix\FourViews\vtkImageBlendWithMask.cpp" />
+    <ClCompile Include="Examples\Appendix\FourViews\vtkInteractorStyleImage2D.cpp" />
+    <ClCompile Include="Examples\Appendix\FourViews\vtkOrientationAnnotation.cpp" />
+    <ClCompile Include="Examples\Appendix\FourViews\vtkOrientedBoxWidget.cpp" />
+    <ClCompile Include="Examples\Appendix\FourViews\vtkRulerWidget.cpp" />
+    <ClCompile Include="Examples\Appendix\FourViews\vtkSynchronizedView.cpp" />
+    <ClCompile Include="Examples\Appendix\FourViews\vtkTextUnicodeProperty.cpp" />
+    <ClCompile Include="Examples\Appendix\FourViews\vtkViewImage.cpp" />
+    <ClCompile Include="Examples\Appendix\FourViews\vtkViewImage2D.cpp" />
+    <ClCompile Include="Examples\Appendix\FourViews\vtkViewImage2DCommand.cpp" />
+    <ClCompile Include="Examples\Appendix\FourViews\vtkViewImage2DFullCommand.cpp" />
+    <ClCompile Include="Examples\Appendix\FourViews\vtkViewImage3D.cpp" />
+    <ClCompile Include="Examples\Appendix\VolumeRendering\GradientColorButton.cpp" />
+    <ClCompile Include="Examples\Appendix\VolumeRendering\MainFrm.cpp" />
+    <ClCompile Include="Examples\Appendix\VolumeRendering\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdCXX\CMakeCXXCompilerId.cpp" />
+    <ClCompile Include="Examples\Appendix\VolumeRendering\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdC\CMakeCCompilerId.c" />
+    <ClCompile Include="Examples\Appendix\VolumeRendering\out\build\x64-Debug\CMakeFiles\ShowIncludes\main.c" />
+    <ClCompile Include="Examples\Appendix\VolumeRendering\stdafx.cpp" />
+    <ClCompile Include="Examples\Appendix\VolumeRendering\TransparencySetButton.cpp" />
+    <ClCompile Include="Examples\Appendix\VolumeRendering\ValueColorTable.cpp" />
+    <ClCompile Include="Examples\Appendix\VolumeRendering\VRApp.cpp" />
+    <ClCompile Include="Examples\Appendix\VolumeRendering\VRAppDoc.cpp" />
+    <ClCompile Include="Examples\Appendix\VolumeRendering\VRAppView.cpp" />
+    <ClCompile Include="Examples\Appendix\VolumeRendering\VRToolBar.cpp" />
+    <ClCompile Include="Examples\Appendix\vtkDisplayChinese\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdCXX\CMakeCXXCompilerId.cpp" />
+    <ClCompile Include="Examples\Appendix\vtkDisplayChinese\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdC\CMakeCCompilerId.c" />
+    <ClCompile Include="Examples\Appendix\vtkDisplayChinese\out\build\x64-Debug\CMakeFiles\ShowIncludes\main.c" />
+    <ClCompile Include="Examples\Appendix\vtkDisplayChinese\vtkDisplayChinese.cpp" />
+    <ClCompile Include="Examples\Appendix\vtkDisplayChinese\vtkFreeTypeUtilitiesUnicode.cpp" />
+    <ClCompile Include="Examples\Appendix\vtkDisplayChinese\vtkFTGLChineseCharacterMapper.cpp" />
+    <ClCompile Include="Examples\Appendix\vtkDisplayChinese\vtkTextUnicodeProperty.cpp" />
+    <ClCompile Include="Examples\Chap01\1.3_TestVTKInstall.cpp" />
+    <ClCompile Include="Examples\Chap01\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdCXX\CMakeCXXCompilerId.cpp" />
+    <ClCompile Include="Examples\Chap01\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdC\CMakeCCompilerId.c" />
+    <ClCompile Include="Examples\Chap01\out\build\x64-Debug\CMakeFiles\ShowIncludes\main.c" />
+    <ClCompile Include="Examples\Chap02\2.1_RenderCylinder.cpp" />
+    <ClCompile Include="Examples\Chap02\2.2_RenderCylinder-Lights.cpp" />
+    <ClCompile Include="Examples\Chap02\2.2_TextureExample.cpp" />
+    <ClCompile Include="Examples\Chap02\2.3_Viewport.cpp" />
+    <ClCompile Include="Examples\Chap02\2.4_vtkPipelineDemo.cpp" />
+    <ClCompile Include="Examples\Chap02\2.4_vtkPipelineExecute.cpp" />
+    <ClCompile Include="Examples\Chap02\2.5_ReferenceCounting.cpp" />
+    <ClCompile Include="Examples\Chap02\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdCXX\CMakeCXXCompilerId.cpp" />
+    <ClCompile Include="Examples\Chap02\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdC\CMakeCCompilerId.c" />
+    <ClCompile Include="Examples\Chap02\out\build\x64-Debug\CMakeFiles\ShowIncludes\main.c" />
+    <ClCompile Include="Examples\Chap03\3.2_TriangleGeometryLines.cpp" />
+    <ClCompile Include="Examples\Chap03\3.2_TrianglePoints.cpp" />
+    <ClCompile Include="Examples\Chap03\3.2_TriangleVertices.cpp" />
+    <ClCompile Include="Examples\Chap03\3.4_VTKConceptScalars.cpp" />
+    <ClCompile Include="Examples\Chap03\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdCXX\CMakeCXXCompilerId.cpp" />
+    <ClCompile Include="Examples\Chap03\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdC\CMakeCCompilerId.c" />
+    <ClCompile Include="Examples\Chap03\out\build\x64-Debug\CMakeFiles\ShowIncludes\main.c" />
+    <ClCompile Include="Examples\Chap04\4.1_ReadSeriesImages1.cpp" />
+    <ClCompile Include="Examples\Chap04\4.1_ReadSeriesImages2.cpp" />
+    <ClCompile Include="Examples\Chap04\4.1_ReadSeriesImages3.cpp" />
+    <ClCompile Include="Examples\Chap04\4.1_ReadUnknowFormatImage.cpp" />
+    <ClCompile Include="Examples\Chap04\4.1_ReadWriteSingleImage.cpp" />
+    <ClCompile Include="Examples\Chap04\4.2_Import3DS.cpp" />
+    <ClCompile Include="Examples\Chap04\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdCXX\CMakeCXXCompilerId.cpp" />
+    <ClCompile Include="Examples\Chap04\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdC\CMakeCCompilerId.c" />
+    <ClCompile Include="Examples\Chap04\out\build\x64-Debug\CMakeFiles\ShowIncludes\main.c" />
+    <ClCompile Include="Examples\Chap05\5.1_CreateVTKImageData.cpp" />
+    <ClCompile Include="Examples\Chap05\5.1_ImageCanvasSource2D.cpp" />
+    <ClCompile Include="Examples\Chap05\5.2_DisplayImageExample.cpp" />
+    <ClCompile Include="Examples\Chap05\5.2_DisplayImageExample2.cpp" />
+    <ClCompile Include="Examples\Chap05\5.2_ImageBlendExample.cpp" />
+    <ClCompile Include="Examples\Chap05\5.3_Color2GrayImageExample.cpp" />
+    <ClCompile Include="Examples\Chap05\5.3_ExtractVOIExample.cpp" />
+    <ClCompile Include="Examples\Chap05\5.3_GetImageInformationExample.cpp" />
+    <ClCompile Include="Examples\Chap05\5.3_Gray2ColorImageExample.cpp" />
+    <ClCompile Include="Examples\Chap05\5.3_ImageAccumulateExample.cpp" />
+    <ClCompile Include="Examples\Chap05\5.3_ImageAccumulateExample2.cpp" />
+    <ClCompile Include="Examples\Chap05\5.3_ImageAppendComponentsExample.cpp" />
+    <ClCompile Include="Examples\Chap05\5.3_ImageBinaryExample.cpp" />
+    <ClCompile Include="Examples\Chap05\5.3_ImageCastExample.cpp" />
+    <ClCompile Include="Examples\Chap05\5.3_ImageChangeInformationExample.cpp" />
+    <ClCompile Include="Examples\Chap05\5.3_ImageExtractComponentsExample.cpp" />
+    <ClCompile Include="Examples\Chap05\5.3_ImageLogicExample.cpp" />
+    <ClCompile Include="Examples\Chap05\5.3_ImageMathematicsExample.cpp" />
+    <ClCompile Include="Examples\Chap05\5.3_ImageResliceExample.cpp" />
+    <ClCompile Include="Examples\Chap05\5.3_ImageResliceExample2.cpp" />
+    <ClCompile Include="Examples\Chap05\5.3_ImageShrink3DExample.cpp" />
+    <ClCompile Include="Examples\Chap05\5.3_ImageShrinkMagnifyExample.cpp" />
+    <ClCompile Include="Examples\Chap05\5.3_VisitImagePixelDirectlyExample.cpp" />
+    <ClCompile Include="Examples\Chap05\5.3_VisitImagePixelIterativelyExample.cpp" />
+    <ClCompile Include="Examples\Chap05\5.4_CannyExample.cpp" />
+    <ClCompile Include="Examples\Chap05\5.4_ImageGradientExample.cpp" />
+    <ClCompile Include="Examples\Chap05\5.4_LaplacianExample.cpp" />
+    <ClCompile Include="Examples\Chap05\5.4_SobelExample.cpp" />
+    <ClCompile Include="Examples\Chap05\5.5_AnistropicFilteringExample.cpp" />
+    <ClCompile Include="Examples\Chap05\5.5_GaussianFilterExample.cpp" />
+    <ClCompile Include="Examples\Chap05\5.5_MeanFilterExample.cpp" />
+    <ClCompile Include="Examples\Chap05\5.5_MedianFilterExample.cpp" />
+    <ClCompile Include="Examples\Chap05\5.6_ButterworthHighPassExample.cpp" />
+    <ClCompile Include="Examples\Chap05\5.6_ButterworthLowPassExample.cpp" />
+    <ClCompile Include="Examples\Chap05\5.6_FFTAndRFFTExample.cpp" />
+    <ClCompile Include="Examples\Chap05\5.6_IdealHighPassExample.cpp" />
+    <ClCompile Include="Examples\Chap05\5.6_IdealLowPassExample.cpp" />
+    <ClCompile Include="Examples\Chap05\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdCXX\CMakeCXXCompilerId.cpp" />
+    <ClCompile Include="Examples\Chap05\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdC\CMakeCCompilerId.c" />
+    <ClCompile Include="Examples\Chap05\out\build\x64-Debug\CMakeFiles\ShowIncludes\main.c" />
+    <ClCompile Include="Examples\Chap06\6.1_PolyDataAttribute.cpp" />
+    <ClCompile Include="Examples\Chap06\6.1_PolyDataColor.cpp" />
+    <ClCompile Include="Examples\Chap06\6.1_PolyDataNew.cpp" />
+    <ClCompile Include="Examples\Chap06\6.1_PolyDataSource.cpp" />
+    <ClCompile Include="Examples\Chap06\6.2_PolyDataBoundingBox.cpp" />
+    <ClCompile Include="Examples\Chap06\6.2_PolyDataCurvature.cpp" />
+    <ClCompile Include="Examples\Chap06\6.2_PolyDataGeodesic.cpp" />
+    <ClCompile Include="Examples\Chap06\6.2_PolyDataMassProperty.cpp" />
+    <ClCompile Include="Examples\Chap06\6.2_PolyDataNormal.cpp" />
+    <ClCompile Include="Examples\Chap06\6.3_PolyDataLapLasianSmooth.cpp" />
+    <ClCompile Include="Examples\Chap06\6.4_PolyDataClosed.cpp" />
+    <ClCompile Include="Examples\Chap06\6.5_PolyDataConnectedAllCompExtract.cpp" />
+    <ClCompile Include="Examples\Chap06\6.5_PolyDataConnectedCompExtract.cpp" />
+    <ClCompile Include="Examples\Chap06\6.6_PolyDataDecimation.cpp" />
+    <ClCompile Include="Examples\Chap06\6.6_PolyDataSubdivision.cpp" />
+    <ClCompile Include="Examples\Chap06\6.7_PolyDataConstrainedDelaunay2D.cpp" />
+    <ClCompile Include="Examples\Chap06\6.7_PolyDataDelaunay2D.cpp" />
+    <ClCompile Include="Examples\Chap06\6.7_PolyDataMarchingCubes.cpp" />
+    <ClCompile Include="Examples\Chap06\6.7_PolyDataSurfaceReconstruction.cpp" />
+    <ClCompile Include="Examples\Chap06\6.8_PolyDataICP.cpp" />
+    <ClCompile Include="Examples\Chap06\6.8_PolyDataLandmarkReg.cpp" />
+    <ClCompile Include="Examples\Chap06\6.9_TextureMap.cpp" />
+    <ClCompile Include="Examples\Chap06\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdCXX\CMakeCXXCompilerId.cpp" />
+    <ClCompile Include="Examples\Chap06\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdC\CMakeCCompilerId.c" />
+    <ClCompile Include="Examples\Chap06\out\build\x64-Debug\CMakeFiles\ShowIncludes\main.c" />
+    <ClCompile Include="Examples\Chap07\7.1_VolumeRenderingApp.cpp" />
+    <ClCompile Include="Examples\Chap07\7.2_ClippingApp.cpp" />
+    <ClCompile Include="Examples\Chap07\7.2_CroppingApp.cpp" />
+    <ClCompile Include="Examples\Chap07\7.2_FixedPointVolRenderingApp.cpp" />
+    <ClCompile Include="Examples\Chap07\7.2_GPURayCastingVolRenderingApp.cpp" />
+    <ClCompile Include="Examples\Chap07\7.2_IsoSurfaceVolRenderingApp.cpp" />
+    <ClCompile Include="Examples\Chap07\7.2_MIPVolRenderingApp.cpp" />
+    <ClCompile Include="Examples\Chap07\7.2_Texture2DVolRenderingApp.cpp" />
+    <ClCompile Include="Examples\Chap07\7.2_Texture3DVolRenderingApp.cpp" />
+    <ClCompile Include="Examples\Chap07\7.3_vtkLODProp3DApp.cpp" />
+    <ClCompile Include="Examples\Chap07\7.4_UnstructuredGridVolumeRenderingApp.cpp" />
+    <ClCompile Include="Examples\Chap07\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdCXX\CMakeCXXCompilerId.cpp" />
+    <ClCompile Include="Examples\Chap07\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdC\CMakeCCompilerId.c" />
+    <ClCompile Include="Examples\Chap07\out\build\x64-Debug\CMakeFiles\ShowIncludes\main.c" />
+    <ClCompile Include="Examples\Chap08\8.1_ObserverCommandDemo1.cpp" />
+    <ClCompile Include="Examples\Chap08\8.1_ObserverCommandDemo2.cpp" />
+    <ClCompile Include="Examples\Chap08\8.2_InteractionDemo.cpp" />
+    <ClCompile Include="Examples\Chap08\8.3_AnnotationWidget.cpp" />
+    <ClCompile Include="Examples\Chap08\8.3_MeasurementWidget.cpp" />
+    <ClCompile Include="Examples\Chap08\8.4_CellPicker.cpp" />
+    <ClCompile Include="Examples\Chap08\8.4_PointPicker.cpp" />
+    <ClCompile Include="Examples\Chap08\8.4_PropPicker.cpp" />
+    <ClCompile Include="Examples\Chap08\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdCXX\CMakeCXXCompilerId.cpp" />
+    <ClCompile Include="Examples\Chap08\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdC\CMakeCCompilerId.c" />
+    <ClCompile Include="Examples\Chap08\out\build\x64-Debug\CMakeFiles\ShowIncludes\main.c" />
+    <ClCompile Include="Examples\Chap09\Qt\main.cpp" />
+    <ClCompile Include="Examples\Chap09\Qt\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdCXX\CMakeCXXCompilerId.cpp" />
+    <ClCompile Include="Examples\Chap09\Qt\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdC\CMakeCCompilerId.c" />
+    <ClCompile Include="Examples\Chap09\Qt\out\build\x64-Debug\CMakeFiles\ShowIncludes\main.c" />
+    <ClCompile Include="Examples\Chap09\Qt\ProjectMainWindow.cpp" />
+    <ClCompile Include="Examples\Chap09\vtkDialog\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdCXX\CMakeCXXCompilerId.cpp" />
+    <ClCompile Include="Examples\Chap09\vtkDialog\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdC\CMakeCCompilerId.c" />
+    <ClCompile Include="Examples\Chap09\vtkDialog\out\build\x64-Debug\CMakeFiles\ShowIncludes\main.c" />
+    <ClCompile Include="Examples\Chap09\vtkDialog\stdafx.cpp" />
+    <ClCompile Include="Examples\Chap09\vtkDialog\vtkDialog.cpp" />
+    <ClCompile Include="Examples\Chap09\vtkDialog\vtkDialogDlg.cpp" />
+    <ClCompile Include="Examples\Chap09\vtkDialog\vtkView.cpp" />
+    <ClCompile Include="Examples\Chap09\vtkDialog\vtkView3D.cpp" />
+    <ClCompile Include="Examples\Chap09\vtkResample\MainFrm.cpp" />
+    <ClCompile Include="Examples\Chap09\vtkResample\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdCXX\CMakeCXXCompilerId.cpp" />
+    <ClCompile Include="Examples\Chap09\vtkResample\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdC\CMakeCCompilerId.c" />
+    <ClCompile Include="Examples\Chap09\vtkResample\out\build\x64-Debug\CMakeFiles\ShowIncludes\main.c" />
+    <ClCompile Include="Examples\Chap09\vtkResample\ResampleDialog.cpp" />
+    <ClCompile Include="Examples\Chap09\vtkResample\stdafx.cpp" />
+    <ClCompile Include="Examples\Chap09\vtkResample\vtkSDI.cpp" />
+    <ClCompile Include="Examples\Chap09\vtkResample\vtkSDIDoc.cpp" />
+    <ClCompile Include="Examples\Chap09\vtkResample\vtkSDIView.cpp" />
+    <ClCompile Include="Examples\Chap09\vtkSDI\MainFrm.cpp" />
+    <ClCompile Include="Examples\Chap09\vtkSDI\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdCXX\CMakeCXXCompilerId.cpp" />
+    <ClCompile Include="Examples\Chap09\vtkSDI\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdC\CMakeCCompilerId.c" />
+    <ClCompile Include="Examples\Chap09\vtkSDI\out\build\x64-Debug\CMakeFiles\ShowIncludes\main.c" />
+    <ClCompile Include="Examples\Chap09\vtkSDI\stdafx.cpp" />
+    <ClCompile Include="Examples\Chap09\vtkSDI\vtkSDI.cpp" />
+    <ClCompile Include="Examples\Chap09\vtkSDI\vtkSDIDoc.cpp" />
+    <ClCompile Include="Examples\Chap09\vtkSDI\vtkSDIView.cpp" />
+    <ClCompile Include="Examples\Chap10\10.1_ClassTest.cpp" />
+    <ClCompile Include="Examples\Chap10\10.1_ObserverTest.cpp" />
+    <ClCompile Include="Examples\Chap10\10.1_vtkTest.cpp" />
+    <ClCompile Include="Examples\Chap10\10.3_AlgorithmFilterTest.cpp" />
+    <ClCompile Include="Examples\Chap10\10.3_ImageAlgorithmFilterTest.cpp" />
+    <ClCompile Include="Examples\Chap10\10.3_PolyDataAlgorithmFilterTest.cpp" />
+    <ClCompile Include="Examples\Chap10\10.3_ReportProgressFilterTest.cpp" />
+    <ClCompile Include="Examples\Chap10\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdCXX\CMakeCXXCompilerId.cpp" />
+    <ClCompile Include="Examples\Chap10\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdC\CMakeCCompilerId.c" />
+    <ClCompile Include="Examples\Chap10\out\build\x64-Debug\CMakeFiles\ShowIncludes\main.c" />
+    <ClCompile Include="Examples\Chap10\vtkAlgorithmFilter.cpp" />
+    <ClCompile Include="Examples\Chap10\vtkImageAlgorithmFilter.cpp" />
+    <ClCompile Include="Examples\Chap10\vtkPolyDataAlgorithmFilter.cpp" />
+    <ClCompile Include="Examples\Chap10\vtkReportProgressFilter.cpp" />
+    <ClCompile Include="Examples\Chap10\vtkTestClass.cpp" />
+    <ClCompile Include="Examples\Chap10\vtkTestDataObject.cpp" />
+    <ClCompile Include="Examples\Chap10\vtkTestFilter.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Examples\Appendix\FourViews\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CMakeDetermineCompilerABI_C.bin" />
+    <None Include="Examples\Appendix\FourViews\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CMakeDetermineCompilerABI_CXX.bin" />
+    <None Include="Examples\Appendix\VolumeRendering\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CMakeDetermineCompilerABI_C.bin" />
+    <None Include="Examples\Appendix\VolumeRendering\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CMakeDetermineCompilerABI_CXX.bin" />
+    <None Include="Examples\Appendix\VolumeRendering\res\VRApp.rc2" />
+    <None Include="Examples\Appendix\vtkDisplayChinese\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CMakeDetermineCompilerABI_C.bin" />
+    <None Include="Examples\Appendix\vtkDisplayChinese\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CMakeDetermineCompilerABI_CXX.bin" />
+    <None Include="Examples\Chap01\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CMakeDetermineCompilerABI_C.bin" />
+    <None Include="Examples\Chap01\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CMakeDetermineCompilerABI_CXX.bin" />
+    <None Include="Examples\Chap02\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CMakeDetermineCompilerABI_C.bin" />
+    <None Include="Examples\Chap02\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CMakeDetermineCompilerABI_CXX.bin" />
+    <None Include="Examples\Chap03\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CMakeDetermineCompilerABI_C.bin" />
+    <None Include="Examples\Chap03\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CMakeDetermineCompilerABI_CXX.bin" />
+    <None Include="Examples\Chap04\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CMakeDetermineCompilerABI_C.bin" />
+    <None Include="Examples\Chap04\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CMakeDetermineCompilerABI_CXX.bin" />
+    <None Include="Examples\Chap05\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CMakeDetermineCompilerABI_C.bin" />
+    <None Include="Examples\Chap05\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CMakeDetermineCompilerABI_CXX.bin" />
+    <None Include="Examples\Chap06\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CMakeDetermineCompilerABI_C.bin" />
+    <None Include="Examples\Chap06\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CMakeDetermineCompilerABI_CXX.bin" />
+    <None Include="Examples\Chap07\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CMakeDetermineCompilerABI_C.bin" />
+    <None Include="Examples\Chap07\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CMakeDetermineCompilerABI_CXX.bin" />
+    <None Include="Examples\Chap08\data\scalarBarWidgetTestData.vtk" />
+    <None Include="Examples\Chap08\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CMakeDetermineCompilerABI_C.bin" />
+    <None Include="Examples\Chap08\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CMakeDetermineCompilerABI_CXX.bin" />
+    <None Include="Examples\Chap09\Qt\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CMakeDetermineCompilerABI_C.bin" />
+    <None Include="Examples\Chap09\Qt\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CMakeDetermineCompilerABI_CXX.bin" />
+    <None Include="Examples\Chap09\vtkDialog\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CMakeDetermineCompilerABI_C.bin" />
+    <None Include="Examples\Chap09\vtkDialog\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CMakeDetermineCompilerABI_CXX.bin" />
+    <None Include="Examples\Chap09\vtkDialog\res\vtkDialog.rc2" />
+    <None Include="Examples\Chap09\vtkResample\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CMakeDetermineCompilerABI_C.bin" />
+    <None Include="Examples\Chap09\vtkResample\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CMakeDetermineCompilerABI_CXX.bin" />
+    <None Include="Examples\Chap09\vtkResample\res\vtkSDI.rc2" />
+    <None Include="Examples\Chap09\vtkSDI\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CMakeDetermineCompilerABI_C.bin" />
+    <None Include="Examples\Chap09\vtkSDI\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CMakeDetermineCompilerABI_CXX.bin" />
+    <None Include="Examples\Chap09\vtkSDI\res\vtkSDI.rc2" />
+    <None Include="Examples\Chap10\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CMakeDetermineCompilerABI_C.bin" />
+    <None Include="Examples\Chap10\out\build\x64-Debug\CMakeFiles\3.20.21032501-MSVC_2\CMakeDetermineCompilerABI_CXX.bin" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Examples\Appendix\FourViews\icon.h" />
+    <ClInclude Include="Examples\Appendix\FourViews\MainWindow.h" />
+    <ClInclude Include="Examples\Appendix\FourViews\out\build\x64-Debug\CMakeFiles\ShowIncludes\foo.h" />
+    <ClInclude Include="Examples\Appendix\FourViews\resource.h" />
+    <ClInclude Include="Examples\Appendix\FourViews\vtkBorderSelectionWidget.h" />
+    <ClInclude Include="Examples\Appendix\FourViews\vtkCornerChineseAnnotation.h" />
+    <ClInclude Include="Examples\Appendix\FourViews\vtkDataSet3DCroppingPlaneCallback.h" />
+    <ClInclude Include="Examples\Appendix\FourViews\vtkFreeTypeUtilitiesUnicode.h" />
+    <ClInclude Include="Examples\Appendix\FourViews\vtkFTGLChineseCharacterMapper.h" />
+    <ClInclude Include="Examples\Appendix\FourViews\vtkImage3DCroppingBoxCallback.h" />
+    <ClInclude Include="Examples\Appendix\FourViews\vtkImageBlendWithMask.h" />
+    <ClInclude Include="Examples\Appendix\FourViews\vtkInteractorStyleImage2D.h" />
+    <ClInclude Include="Examples\Appendix\FourViews\vtkOrientationAnnotation.h" />
+    <ClInclude Include="Examples\Appendix\FourViews\vtkOrientedBoxWidget.h" />
+    <ClInclude Include="Examples\Appendix\FourViews\vtkRulerWidget.h" />
+    <ClInclude Include="Examples\Appendix\FourViews\vtkSynchronizedView.h" />
+    <ClInclude Include="Examples\Appendix\FourViews\vtkTextUnicodeProperty.h" />
+    <ClInclude Include="Examples\Appendix\FourViews\vtkViewImage.h" />
+    <ClInclude Include="Examples\Appendix\FourViews\vtkViewImage2D.h" />
+    <ClInclude Include="Examples\Appendix\FourViews\vtkViewImage2DCommand.h" />
+    <ClInclude Include="Examples\Appendix\FourViews\vtkViewImage2DFullCommand.h" />
+    <ClInclude Include="Examples\Appendix\FourViews\vtkViewImage3D.h" />
+    <ClInclude Include="Examples\Appendix\VolumeRendering\GradientColorButton.h" />
+    <ClInclude Include="Examples\Appendix\VolumeRendering\MainFrm.h" />
+    <ClInclude Include="Examples\Appendix\VolumeRendering\out\build\x64-Debug\CMakeFiles\ShowIncludes\foo.h" />
+    <ClInclude Include="Examples\Appendix\VolumeRendering\resource.h" />
+    <ClInclude Include="Examples\Appendix\VolumeRendering\stdafx.h" />
+    <ClInclude Include="Examples\Appendix\VolumeRendering\targetver.h" />
+    <ClInclude Include="Examples\Appendix\VolumeRendering\TransparencySetButton.h" />
+    <ClInclude Include="Examples\Appendix\VolumeRendering\ValueColorTable.h" />
+    <ClInclude Include="Examples\Appendix\VolumeRendering\VRApp.h" />
+    <ClInclude Include="Examples\Appendix\VolumeRendering\VRAppDoc.h" />
+    <ClInclude Include="Examples\Appendix\VolumeRendering\VRAppView.h" />
+    <ClInclude Include="Examples\Appendix\VolumeRendering\VRToolBar.h" />
+    <ClInclude Include="Examples\Appendix\vtkDisplayChinese\out\build\x64-Debug\CMakeFiles\ShowIncludes\foo.h" />
+    <ClInclude Include="Examples\Appendix\vtkDisplayChinese\vtkFreeTypeUtilitiesUnicode.h" />
+    <ClInclude Include="Examples\Appendix\vtkDisplayChinese\vtkFTGLChineseCharacterMapper.h" />
+    <ClInclude Include="Examples\Appendix\vtkDisplayChinese\vtkTextUnicodeProperty.h" />
+    <ClInclude Include="Examples\Chap01\out\build\x64-Debug\CMakeFiles\ShowIncludes\foo.h" />
+    <ClInclude Include="Examples\Chap02\out\build\x64-Debug\CMakeFiles\ShowIncludes\foo.h" />
+    <ClInclude Include="Examples\Chap03\out\build\x64-Debug\CMakeFiles\ShowIncludes\foo.h" />
+    <ClInclude Include="Examples\Chap04\out\build\x64-Debug\CMakeFiles\ShowIncludes\foo.h" />
+    <ClInclude Include="Examples\Chap05\out\build\x64-Debug\CMakeFiles\ShowIncludes\foo.h" />
+    <ClInclude Include="Examples\Chap06\out\build\x64-Debug\CMakeFiles\ShowIncludes\foo.h" />
+    <ClInclude Include="Examples\Chap07\out\build\x64-Debug\CMakeFiles\ShowIncludes\foo.h" />
+    <ClInclude Include="Examples\Chap08\out\build\x64-Debug\CMakeFiles\ShowIncludes\foo.h" />
+    <ClInclude Include="Examples\Chap09\Qt\out\build\x64-Debug\CMakeFiles\ShowIncludes\foo.h" />
+    <ClInclude Include="Examples\Chap09\Qt\ProjectMainWindow.h" />
+    <ClInclude Include="Examples\Chap09\vtkDialog\out\build\x64-Debug\CMakeFiles\ShowIncludes\foo.h" />
+    <ClInclude Include="Examples\Chap09\vtkDialog\resource.h" />
+    <ClInclude Include="Examples\Chap09\vtkDialog\stdafx.h" />
+    <ClInclude Include="Examples\Chap09\vtkDialog\targetver.h" />
+    <ClInclude Include="Examples\Chap09\vtkDialog\vtkDialog.h" />
+    <ClInclude Include="Examples\Chap09\vtkDialog\vtkDialogDlg.h" />
+    <ClInclude Include="Examples\Chap09\vtkDialog\vtkView.h" />
+    <ClInclude Include="Examples\Chap09\vtkDialog\vtkView3D.h" />
+    <ClInclude Include="Examples\Chap09\vtkResample\MainFrm.h" />
+    <ClInclude Include="Examples\Chap09\vtkResample\out\build\x64-Debug\CMakeFiles\ShowIncludes\foo.h" />
+    <ClInclude Include="Examples\Chap09\vtkResample\ResampleDialog.h" />
+    <ClInclude Include="Examples\Chap09\vtkResample\resource.h" />
+    <ClInclude Include="Examples\Chap09\vtkResample\stdafx.h" />
+    <ClInclude Include="Examples\Chap09\vtkResample\targetver.h" />
+    <ClInclude Include="Examples\Chap09\vtkResample\vtkSDI.h" />
+    <ClInclude Include="Examples\Chap09\vtkResample\vtkSDIDoc.h" />
+    <ClInclude Include="Examples\Chap09\vtkResample\vtkSDIView.h" />
+    <ClInclude Include="Examples\Chap09\vtkSDI\MainFrm.h" />
+    <ClInclude Include="Examples\Chap09\vtkSDI\out\build\x64-Debug\CMakeFiles\ShowIncludes\foo.h" />
+    <ClInclude Include="Examples\Chap09\vtkSDI\Resource.h" />
+    <ClInclude Include="Examples\Chap09\vtkSDI\stdafx.h" />
+    <ClInclude Include="Examples\Chap09\vtkSDI\targetver.h" />
+    <ClInclude Include="Examples\Chap09\vtkSDI\vtkSDI.h" />
+    <ClInclude Include="Examples\Chap09\vtkSDI\vtkSDIDoc.h" />
+    <ClInclude Include="Examples\Chap09\vtkSDI\vtkSDIView.h" />
+    <ClInclude Include="Examples\Chap10\out\build\x64-Debug\CMakeFiles\ShowIncludes\foo.h" />
+    <ClInclude Include="Examples\Chap10\vtkAlgorithmFilter.h" />
+    <ClInclude Include="Examples\Chap10\vtkImageAlgorithmFilter.h" />
+    <ClInclude Include="Examples\Chap10\vtkPolyDataAlgorithmFilter.h" />
+    <ClInclude Include="Examples\Chap10\vtkReportProgressFilter.h" />
+    <ClInclude Include="Examples\Chap10\vtkTestClass.h" />
+    <ClInclude Include="Examples\Chap10\vtkTestDataObject.h" />
+    <ClInclude Include="Examples\Chap10\vtkTestFilter.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Examples\Appendix\FourViews\icon.rc" />
+    <ResourceCompile Include="Examples\Appendix\VolumeRendering\VRApp.rc" />
+    <ResourceCompile Include="Examples\Chap09\vtkDialog\vtkDialog.rc" />
+    <ResourceCompile Include="Examples\Chap09\vtkResample\vtkSDI.rc" />
+    <ResourceCompile Include="Examples\Chap09\vtkSDI\vtkSDI.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Examples\Chap08\data\lena.bmp" />
+    <Image Include="Examples\Chap08\data\VTK-logo.png" />
+    <Image Include="Examples\Chap08\data\VTKBook-TestImage.jpg" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
