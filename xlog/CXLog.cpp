@@ -27,6 +27,7 @@ xlog::CLogMgr::~CLogMgr()
     CloseHandle(m_hEvent);
     m_hEvent = INVALID_HANDLE_VALUE;
     m_hThreadWrite = NULL;
+    DeleteCriticalSection(&m_cs);
 }
 
 void xlog::CLogMgr::Init()

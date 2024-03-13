@@ -1,0 +1,568 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="adrian.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="BlueCup.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="box.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="box_in_scene.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="checkerboard9x6.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="example_16-01-imgA.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="example_16-01-imgB.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="faces.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="faceScene.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="faceTemplate.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="fruits.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="HandIndoorColor.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="HandOutdoorColor.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="HandOutdoorSunColor.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="stuff.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="birdseye\IMG_0214.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="birdseye\IMG_0214L.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="birdseye\IMG_0215.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="birdseye\IMG_0215L.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="birdseye\IMG_0217.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="birdseye\IMG_0217L.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="birdseye\IMG_0218.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="birdseye\IMG_0218L.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="birdseye\IMG_0219.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="birdseye\IMG_0219L.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="birdseye\IMG_0220.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="birdseye\IMG_0220L.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="calibration\IMG_0191.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="calibration\IMG_0192.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="calibration\IMG_0193.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="calibration\IMG_0194.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="calibration\IMG_0195.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="calibration\IMG_0196.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="calibration\IMG_0197.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="calibration\IMG_0198.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="calibration\IMG_0199.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="calibration\IMG_0200.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="calibration\IMG_0201.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="calibration\IMG_0202.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="calibration\IMG_0203.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="calibration\IMG_0204.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="calibration\IMG_0205.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="calibration\IMG_0206.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="calibration\IMG_0207.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="calibration\IMG_0208.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="calibration\IMG_0209.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="calibration\IMG_0210.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="calibration\IMG_0211.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="calibration\IMG_0212.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="calibration\IMG_0213.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="shape_sample\1.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="shape_sample\2.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="shape_sample\3.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="shape_sample\4.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="shape_sample\5.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="shape_sample\6.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="shape_sample\7.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="shape_sample\8.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="shape_sample\9.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="shape_sample\10.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="shape_sample\11.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="shape_sample\12.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="shape_sample\13.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="shape_sample\14.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="shape_sample\15.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="shape_sample\16.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="shape_sample\17.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="shape_sample\18.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="shape_sample\19.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="shape_sample\20.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="stereoData\left01.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="stereoData\left02.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="stereoData\left03.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="stereoData\left04.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="stereoData\left05.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="stereoData\left06.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="stereoData\left07.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="stereoData\left08.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="stereoData\left09.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="stereoData\left10.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="stereoData\left11.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="stereoData\left12.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="stereoData\left13.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="stereoData\left14.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="stereoData\right01.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="stereoData\right02.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="stereoData\right03.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="stereoData\right04.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="stereoData\right05.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="stereoData\right06.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="stereoData\right07.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="stereoData\right08.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="stereoData\right09.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="stereoData\right10.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="stereoData\right11.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="stereoData\right12.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="stereoData\right13.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="stereoData\right14.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="CMakeLists.txt" />
+    <Text Include="stereoData\example_19-03_list.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Dockerfile" />
+    <None Include="README.md" />
+    <None Include="test.avi" />
+    <None Include="tree.avi" />
+    <None Include="birdseye\.DS_Store" />
+    <None Include="mushroom\agaricus-lepiota.data" />
+    <None Include="mushroom\agaricus-lepiota.names" />
+    <None Include="mushroom\citation" />
+    <None Include="mushroom\expanded.Z" />
+    <None Include="mushroom\Index" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="example_02-01.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_02-02.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_02-03.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_02-04.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_02-05.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_02-06.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_02-07.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_02-08.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_02-09.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_02-10.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_02-11.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_04-01.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_04-02.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_04-03.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_04-04.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_05-01.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_07-01.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_08-01.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_08-02.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_08-03.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_09-01.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_09-02.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_09-03.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_09-04.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_09-05.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_09-06.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_09-07.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_09-08.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_09-09.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_09-10.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_09-11.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_10-01.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_10-02.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_10-03.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_11-01.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_11-02.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_11-03.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_12-01.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_12-02.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_12-03.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_12-04.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_13-01.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_13-02.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_13-03.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_14-01.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_14-02.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_14-03.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_14-04.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_15-01.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_15-02.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_15-03.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_15-04.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_15-05.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_15-BackgroundSubtractor.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_16-01.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_16-02.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_17-01.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_17-02.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_18-01.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_18-01_from_disk.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_19-01.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_19-02.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_19-03.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_19-04.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_20-01.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_20-02.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_21-01.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="example_22-01.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises_5.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises_7.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises_8_1.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises_9_1-2-10-11-12-15-16.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises_9_4.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises_9_5.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises_11-1-2-5-6-7.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises_13_1-2-11.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises_13_9.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="haarcascade_frontalcatface.xml" />
+    <Xml Include="haarcascade_frontalcatface_extended.xml" />
+    <Xml Include="haarcascade_frontalface_alt.xml" />
+    <Xml Include="birdseye\intrinsics.xml" />
+  </ItemGroup>
+</Project>

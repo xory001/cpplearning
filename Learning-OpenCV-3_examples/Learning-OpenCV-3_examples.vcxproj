@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{048E8F9B-7ABF-4ECB-9AF6-F61900B72108}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <NMakePreprocessorDefinitions>_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <NMakePreprocessorDefinitions>WIN32;_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <NMakePreprocessorDefinitions>WIN32;NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <NMakePreprocessorDefinitions>NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Image Include="adrian.jpg" />
+    <Image Include="birdseye\IMG_0214.jpg" />
+    <Image Include="birdseye\IMG_0214L.jpg" />
+    <Image Include="birdseye\IMG_0215.jpg" />
+    <Image Include="birdseye\IMG_0215L.jpg" />
+    <Image Include="birdseye\IMG_0217.jpg" />
+    <Image Include="birdseye\IMG_0217L.jpg" />
+    <Image Include="birdseye\IMG_0218.jpg" />
+    <Image Include="birdseye\IMG_0218L.jpg" />
+    <Image Include="birdseye\IMG_0219.jpg" />
+    <Image Include="birdseye\IMG_0219L.jpg" />
+    <Image Include="birdseye\IMG_0220.jpg" />
+    <Image Include="birdseye\IMG_0220L.jpg" />
+    <Image Include="BlueCup.jpg" />
+    <Image Include="box.png" />
+    <Image Include="box_in_scene.png" />
+    <Image Include="calibration\IMG_0191.jpg" />
+    <Image Include="calibration\IMG_0192.jpg" />
+    <Image Include="calibration\IMG_0193.jpg" />
+    <Image Include="calibration\IMG_0194.jpg" />
+    <Image Include="calibration\IMG_0195.jpg" />
+    <Image Include="calibration\IMG_0196.jpg" />
+    <Image Include="calibration\IMG_0197.jpg" />
+    <Image Include="calibration\IMG_0198.jpg" />
+    <Image Include="calibration\IMG_0199.jpg" />
+    <Image Include="calibration\IMG_0200.jpg" />
+    <Image Include="calibration\IMG_0201.jpg" />
+    <Image Include="calibration\IMG_0202.jpg" />
+    <Image Include="calibration\IMG_0203.jpg" />
+    <Image Include="calibration\IMG_0204.jpg" />
+    <Image Include="calibration\IMG_0205.jpg" />
+    <Image Include="calibration\IMG_0206.jpg" />
+    <Image Include="calibration\IMG_0207.jpg" />
+    <Image Include="calibration\IMG_0208.jpg" />
+    <Image Include="calibration\IMG_0209.jpg" />
+    <Image Include="calibration\IMG_0210.jpg" />
+    <Image Include="calibration\IMG_0211.jpg" />
+    <Image Include="calibration\IMG_0212.jpg" />
+    <Image Include="calibration\IMG_0213.jpg" />
+    <Image Include="checkerboard9x6.png" />
+    <Image Include="example_16-01-imgA.png" />
+    <Image Include="example_16-01-imgB.png" />
+    <Image Include="faces.png" />
+    <Image Include="faceScene.jpg" />
+    <Image Include="faceTemplate.jpg" />
+    <Image Include="fruits.jpg" />
+    <Image Include="HandIndoorColor.jpg" />
+    <Image Include="HandOutdoorColor.jpg" />
+    <Image Include="HandOutdoorSunColor.jpg" />
+    <Image Include="shape_sample\1.png" />
+    <Image Include="shape_sample\10.png" />
+    <Image Include="shape_sample\11.png" />
+    <Image Include="shape_sample\12.png" />
+    <Image Include="shape_sample\13.png" />
+    <Image Include="shape_sample\14.png" />
+    <Image Include="shape_sample\15.png" />
+    <Image Include="shape_sample\16.png" />
+    <Image Include="shape_sample\17.png" />
+    <Image Include="shape_sample\18.png" />
+    <Image Include="shape_sample\19.png" />
+    <Image Include="shape_sample\2.png" />
+    <Image Include="shape_sample\20.png" />
+    <Image Include="shape_sample\3.png" />
+    <Image Include="shape_sample\4.png" />
+    <Image Include="shape_sample\5.png" />
+    <Image Include="shape_sample\6.png" />
+    <Image Include="shape_sample\7.png" />
+    <Image Include="shape_sample\8.png" />
+    <Image Include="shape_sample\9.png" />
+    <Image Include="stereoData\left01.jpg" />
+    <Image Include="stereoData\left02.jpg" />
+    <Image Include="stereoData\left03.jpg" />
+    <Image Include="stereoData\left04.jpg" />
+    <Image Include="stereoData\left05.jpg" />
+    <Image Include="stereoData\left06.jpg" />
+    <Image Include="stereoData\left07.jpg" />
+    <Image Include="stereoData\left08.jpg" />
+    <Image Include="stereoData\left09.jpg" />
+    <Image Include="stereoData\left10.jpg" />
+    <Image Include="stereoData\left11.jpg" />
+    <Image Include="stereoData\left12.jpg" />
+    <Image Include="stereoData\left13.jpg" />
+    <Image Include="stereoData\left14.jpg" />
+    <Image Include="stereoData\right01.jpg" />
+    <Image Include="stereoData\right02.jpg" />
+    <Image Include="stereoData\right03.jpg" />
+    <Image Include="stereoData\right04.jpg" />
+    <Image Include="stereoData\right05.jpg" />
+    <Image Include="stereoData\right06.jpg" />
+    <Image Include="stereoData\right07.jpg" />
+    <Image Include="stereoData\right08.jpg" />
+    <Image Include="stereoData\right09.jpg" />
+    <Image Include="stereoData\right10.jpg" />
+    <Image Include="stereoData\right11.jpg" />
+    <Image Include="stereoData\right12.jpg" />
+    <Image Include="stereoData\right13.jpg" />
+    <Image Include="stereoData\right14.jpg" />
+    <Image Include="stuff.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="CMakeLists.txt" />
+    <Text Include="stereoData\example_19-03_list.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="birdseye\.DS_Store" />
+    <None Include="Dockerfile" />
+    <None Include="mushroom\agaricus-lepiota.data" />
+    <None Include="mushroom\agaricus-lepiota.names" />
+    <None Include="mushroom\citation" />
+    <None Include="mushroom\expanded.Z" />
+    <None Include="mushroom\Index" />
+    <None Include="README.md" />
+    <None Include="test.avi" />
+    <None Include="tree.avi" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="example_02-01.cpp" />
+    <ClCompile Include="example_02-02.cpp" />
+    <ClCompile Include="example_02-03.cpp" />
+    <ClCompile Include="example_02-04.cpp" />
+    <ClCompile Include="example_02-05.cpp" />
+    <ClCompile Include="example_02-06.cpp" />
+    <ClCompile Include="example_02-07.cpp" />
+    <ClCompile Include="example_02-08.cpp" />
+    <ClCompile Include="example_02-09.cpp" />
+    <ClCompile Include="example_02-10.cpp" />
+    <ClCompile Include="example_02-11.cpp" />
+    <ClCompile Include="example_04-01.cpp" />
+    <ClCompile Include="example_04-02.cpp" />
+    <ClCompile Include="example_04-03.cpp" />
+    <ClCompile Include="example_04-04.cpp" />
+    <ClCompile Include="example_05-01.cpp" />
+    <ClCompile Include="example_07-01.cpp" />
+    <ClCompile Include="example_08-01.cpp" />
+    <ClCompile Include="example_08-02.cpp" />
+    <ClCompile Include="example_08-03.cpp" />
+    <ClCompile Include="example_09-01.cpp" />
+    <ClCompile Include="example_09-02.cpp" />
+    <ClCompile Include="example_09-03.cpp" />
+    <ClCompile Include="example_09-04.cpp" />
+    <ClCompile Include="example_09-05.cpp" />
+    <ClCompile Include="example_09-06.cpp" />
+    <ClCompile Include="example_09-07.cpp" />
+    <ClCompile Include="example_09-08.cpp" />
+    <ClCompile Include="example_09-09.cpp" />
+    <ClCompile Include="example_09-10.cpp" />
+    <ClCompile Include="example_09-11.cpp" />
+    <ClCompile Include="example_10-01.cpp" />
+    <ClCompile Include="example_10-02.cpp" />
+    <ClCompile Include="example_10-03.cpp" />
+    <ClCompile Include="example_11-01.cpp" />
+    <ClCompile Include="example_11-02.cpp" />
+    <ClCompile Include="example_11-03.cpp" />
+    <ClCompile Include="example_12-01.cpp" />
+    <ClCompile Include="example_12-02.cpp" />
+    <ClCompile Include="example_12-03.cpp" />
+    <ClCompile Include="example_12-04.cpp" />
+    <ClCompile Include="example_13-01.cpp" />
+    <ClCompile Include="example_13-02.cpp" />
+    <ClCompile Include="example_13-03.cpp" />
+    <ClCompile Include="example_14-01.cpp" />
+    <ClCompile Include="example_14-02.cpp" />
+    <ClCompile Include="example_14-03.cpp" />
+    <ClCompile Include="example_14-04.cpp" />
+    <ClCompile Include="example_15-01.cpp" />
+    <ClCompile Include="example_15-02.cpp" />
+    <ClCompile Include="example_15-03.cpp" />
+    <ClCompile Include="example_15-04.cpp" />
+    <ClCompile Include="example_15-05.cpp" />
+    <ClCompile Include="example_15-BackgroundSubtractor.cpp" />
+    <ClCompile Include="example_16-01.cpp" />
+    <ClCompile Include="example_16-02.cpp" />
+    <ClCompile Include="example_17-01.cpp" />
+    <ClCompile Include="example_17-02.cpp" />
+    <ClCompile Include="example_18-01.cpp" />
+    <ClCompile Include="example_18-01_from_disk.cpp" />
+    <ClCompile Include="example_19-01.cpp" />
+    <ClCompile Include="example_19-02.cpp" />
+    <ClCompile Include="example_19-03.cpp" />
+    <ClCompile Include="example_19-04.cpp" />
+    <ClCompile Include="example_20-01.cpp" />
+    <ClCompile Include="example_20-02.cpp" />
+    <ClCompile Include="example_21-01.cpp" />
+    <ClCompile Include="example_22-01.cpp" />
+    <ClCompile Include="Exercises_11-1-2-5-6-7.cpp" />
+    <ClCompile Include="Exercises_13_1-2-11.cpp" />
+    <ClCompile Include="Exercises_13_9.cpp" />
+    <ClCompile Include="Exercises_5.cpp" />
+    <ClCompile Include="Exercises_7.cpp" />
+    <ClCompile Include="Exercises_8_1.cpp" />
+    <ClCompile Include="Exercises_9_1-2-10-11-12-15-16.cpp" />
+    <ClCompile Include="Exercises_9_4.cpp" />
+    <ClCompile Include="Exercises_9_5.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="birdseye\intrinsics.xml" />
+    <Xml Include="haarcascade_frontalcatface.xml" />
+    <Xml Include="haarcascade_frontalcatface_extended.xml" />
+    <Xml Include="haarcascade_frontalface_alt.xml" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

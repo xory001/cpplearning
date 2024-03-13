@@ -9,7 +9,7 @@
 
 // 添加要在此处预编译的标头
 #include "framework.h"
-#include <vtkAutoInit.h>
+#include "vtkAutoInit.h"
 VTK_MODULE_INIT(vtkRenderingOpenGL2); // VTK was built with vtkRenderingOpenGL2
 VTK_MODULE_INIT(vtkInteractionStyle);
 
