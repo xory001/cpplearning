@@ -9,6 +9,8 @@
 //https://learn.microsoft.com/zh-cn/cpp/c-runtime-library/reference/beginthread-beginthreadex?view=msvc-170
 
 #define DAY_MILLISECONDS  (24*60*60*1000)
+#define XLOG_EXTENSION_NAME   ".log"
+#define XLOG_BACKUP_EXTENSION_NAME   ".bak"
 
 xlog::CLogMgr* xlog::CLogMgr::m_pInst = new xlog::CLogMgr;
 
@@ -20,6 +22,7 @@ xlog::CLogMgr::CLogMgr()
 
 xlog::CLogMgr::~CLogMgr()
 {
+    //https://learn.microsoft.com/zh-cn/cpp/c-runtime-library/reference/beginthread-beginthreadex?view=msvc-170
     m_bThradExit = true;
     SetEvent(m_hEvent);
     WaitForSingleObject( m_hThreadWrite, 500 );
@@ -27,12 +30,12 @@ xlog::CLogMgr::~CLogMgr()
     CloseHandle(m_hEvent);
     m_hEvent = INVALID_HANDLE_VALUE;
     m_hThreadWrite = NULL;
-    DeleteCriticalSection(&m_cs);
+    DeleteCriticalSection( &m_cs );
 }
 
 void xlog::CLogMgr::Init()
 {
-    ClearHistoryLogFile();
+     ClearHistoryLogFile();
     InitializeCriticalSection(&m_cs);
     m_hThreadWrite = INVALID_HANDLE_VALUE;
     m_bThradExit = false;
@@ -193,7 +196,7 @@ std::string xlog::CLogMgr::GenerateFileName(X_LOG_LEVEL level, int nCurrentIndex
     {
         oss << "_" << nCurrentIndex;
     }
-    oss << ".log";
+    oss << XLOG_EXTENSION_NAME;
    
     return oss.str();
 }
@@ -225,7 +228,7 @@ void xlog::CLogMgr::OpenLogFile(X_LOG_LEVEL level)
 
     if ( ( 0 == m_arrLogCfg[level].nMaxIndex ) && ( 0 == _access( m_arrLogCfg[level].strFileName.c_str(), 0 ) ) )
     {
-        std::string strBakFileName = m_arrLogCfg[level].strFileName + ".bak";
+        std::string strBakFileName = m_arrLogCfg[level].strFileName + XLOG_BACKUP_EXTENSION_NAME;
         DeleteFileA(strBakFileName.c_str());
         MoveFileA( m_arrLogCfg[level].strFileName.c_str(), strBakFileName.c_str() );
     }
@@ -244,15 +247,17 @@ void xlog::CLogMgr::OpenLogFile(X_LOG_LEVEL level)
 
 void xlog::CLogMgr::ClearHistoryLogFile()
 {
-    std::string strAppName;
+    std::string strLogNamePrefix;
     char szBuf[MAX_PATH] = {0};
     int nSize = GetModuleFileNameA( NULL, szBuf, MAX_PATH  - 1 );
     char* pszTrailingSlash = strrchr( szBuf, '\\' );
     if ( pszTrailingSlash )
     {
         *pszTrailingSlash = 0;
-        pszTrailingSlash++;
-        strAppName.assign(pszTrailingSlash);
+        pszTrailingSlash++;  //{app}.exe
+        pszTrailingSlash[strlen(pszTrailingSlash) - 4] = 0;  //remove .exe
+        strLogNamePrefix.assign(pszTrailingSlash);
+        strLogNamePrefix += "_"; 
     }
 
     WIN32_FIND_DATAA wfd;
@@ -275,8 +280,11 @@ void xlog::CLogMgr::ClearHistoryLogFile()
     ULARGE_INTEGER  uTimeCurrent;
     uTimeCurrent.LowPart = ftCurrent.dwLowDateTime;
     uTimeCurrent.HighPart = ftCurrent.dwHighDateTime;
-
-    size_t nMinFileName = strAppName.length() + 4; //4: the length of ".log"
+    
+    std::string strBackupLog = XLOG_EXTENSION_NAME;
+    strBackupLog += XLOG_BACKUP_EXTENSION_NAME;
+    int nSizeExtensionName = strlen(XLOG_EXTENSION_NAME);
+    size_t nMinFileName = strLogNamePrefix.length() + nSizeExtensionName;
     do
     {
         if ( !( wfd.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY ) )
@@ -284,19 +292,23 @@ void xlog::CLogMgr::ClearHistoryLogFile()
             size_t nLenFileName = strlen( wfd.cFileName );
             if ( nLenFileName >= nMinFileName )
             {
-                //{app name}*.log or .log.bak
-                if ( strAppName == wfd.cFileName )
+                //{app name without .exe }_date.{XLOG_EXTENSION_NAME}
+                //or {app name without .exe }_date.{XLOG_EXTENSION_NAME}{XLOG_BACKUP_EXTENSION_NAME}
+                //or {app name without .exe}_tid_date_{index}.{XLOG_EXTENSION_NAME}
+                if ( 0 == strLogNamePrefix.compare(0, strLogNamePrefix.length(), wfd.cFileName, strLogNamePrefix.length() ) ) //compare prefix chars
                 {
                     BOOL bLogFile = FALSE;
-                    if (  ( 0 == strncmp( wfd.cFileName + strlen( wfd.cFileName ) - 4, ".log", 4 ) )  )
+                    //if suffix chars equal XLOG_EXTENSION_NAME
+                    if (  ( 0 == strncmp( wfd.cFileName + strlen( wfd.cFileName ) - nSizeExtensionName, XLOG_EXTENSION_NAME, nSizeExtensionName ) )  ) 
                     {
                         bLogFile = TRUE;
                     }
                     else 
                     {
-                        if ( nLenFileName >= ( nMinFileName + 4 ) )
+                        if ( nLenFileName >= ( strLogNamePrefix.length() + strBackupLog.length() ) )  
                         {
-                            if (  ( 0 == strncmp( wfd.cFileName + strlen( wfd.cFileName ) - 8, ".log.bak", 8 ) )  )
+                            //if suffix chars equal XLOG_EXTENSION_NAME+XLOG_BACKUP_EXTENSION_NAME
+                            if (  ( 0 == strncmp( wfd.cFileName + strlen( wfd.cFileName ) - strBackupLog.length(), strBackupLog.c_str(), strBackupLog.length() ) )  )
                             {
                                 bLogFile = TRUE;
                             }
@@ -313,11 +325,11 @@ void xlog::CLogMgr::ClearHistoryLogFile()
                             DeleteFileA( (strFindDir + wfd.cFileName  ).c_str() );
                         }
                     }
-                }
+                }// compare prefix chars
             } //  if ( nLenFileName >= nLenAppName )
         } // if ( !( wfd.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY ) )
-    }
-    while ( FindNextFileA( hFind, &wfd ) );
+    }while ( FindNextFileA( hFind, &wfd ) );
+
     FindClose(hFind);
 }
 
@@ -343,7 +355,7 @@ UINT _stdcall xlog::CLogMgr::ThreadWrite(void* pVoid)
         }
         veclogItem.clear();
     }
-    _endthreadex(0);
+    _endthreadex( 0 );
     return 0;
 }
 
