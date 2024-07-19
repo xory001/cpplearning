@@ -17,8 +17,12 @@ namespace cpp17
         //cpp_primer_5th_exercise::StartExecise();
         CSTL stl;
         stl.Start();
+        
+        TRACE_INFO( "--------CSyntax--------" );
+        CSyntax syntax;
+        syntax.Start();
         return;
-        StartGramma();
+
         InitFunctionExample();
         //return;
         InitReference();
