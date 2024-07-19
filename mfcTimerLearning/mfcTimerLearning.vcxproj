@@ -30,7 +30,7 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v142</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
     <UseOfMfc>Dynamic</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -183,6 +183,7 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="CLanguageFunctionTest.h" />
     <ClInclude Include="eventTimer\CEventTimer.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="mfcTimerLearning.h" />
@@ -195,6 +196,7 @@
     <ClInclude Include="windowTimer\CWndTimer.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CLanguageFunctionTest.cpp" />
     <ClCompile Include="eventTimer\CEventTimer.cpp" />
     <ClCompile Include="mfcTimerLearning.cpp" />
     <ClCompile Include="mfcTimerLearningDlg.cpp" />

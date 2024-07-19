@@ -57,6 +57,9 @@
     <ClInclude Include="timerQueueTimer\CTimerQueueTimer.h">
       <Filter>timerQueueTimer</Filter>
     </ClInclude>
+    <ClInclude Include="CLanguageFunctionTest.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mfcTimerLearning.cpp">
@@ -79,6 +82,9 @@
     </ClCompile>
     <ClCompile Include="timerQueueTimer\CTimerQueueTimer.cpp">
       <Filter>timerQueueTimer</Filter>
+    </ClCompile>
+    <ClCompile Include="CLanguageFunctionTest.cpp">
+      <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

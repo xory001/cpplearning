@@ -122,6 +122,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -137,6 +138,7 @@
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -146,29 +148,31 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="cpp14\CFunctionExample.cpp" />
-    <ClCompile Include="cpp14\cpp_primer_5th_exercise\CExercise_Chapter_10.cpp" />
-    <ClCompile Include="cpp14\cpp_primer_5th_exercise\CStartExecise.cpp" />
+    <ClCompile Include="cpp17\CFunctionExample.cpp" />
+    <ClCompile Include="cpp17\CInitType.cpp" />
+    <ClCompile Include="cpp17\COperator.cpp" />
+    <ClCompile Include="cpp17\CPointer.cpp" />
+    <ClCompile Include="cpp17\cpp_primer_5th_exercise\CExercise_Chapter_10.cpp" />
+    <ClCompile Include="cpp17\cpp_primer_5th_exercise\CStartExecise.cpp" />
+    <ClCompile Include="cpp17\CReference.cpp" />
+    <ClCompile Include="cpp17\CStart.cpp" />
+    <ClCompile Include="cpp17\CSTL.cpp" />
+    <ClCompile Include="cpp17\CSyntax.cpp" />
+    <ClCompile Include="cpp17\CThread.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="cpp14\CSyntax.cpp" />
-    <ClCompile Include="cpp14\CInitType.cpp" />
-    <ClCompile Include="cpp14\CPointer.cpp" />
-    <ClCompile Include="cpp14\CReference.cpp" />
-    <ClCompile Include="cpp14\CStart.cpp" />
-    <ClCompile Include="cpp14\CSTL.cpp" />
-    <ClCompile Include="cpp14\CThread.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="cpp14\CFunctionExample.h" />
-    <ClInclude Include="cpp14\CSyntax.h" />
-    <ClInclude Include="cpp14\CInitType.h" />
-    <ClInclude Include="cpp14\CPointer.h" />
-    <ClInclude Include="cpp14\cpp_primer_5th_exercise\CExercise_Chapter_10.h" />
-    <ClInclude Include="cpp14\cpp_primer_5th_exercise\CStartExecise.h" />
-    <ClInclude Include="cpp14\CReference.h" />
-    <ClInclude Include="cpp14\CStart.h" />
-    <ClInclude Include="cpp14\CSTL.h" />
-    <ClInclude Include="cpp14\CThread.h" />
+    <ClInclude Include="cpp17\CFunctionExample.h" />
+    <ClInclude Include="cpp17\CInitType.h" />
+    <ClInclude Include="cpp17\COperator.h" />
+    <ClInclude Include="cpp17\CPointer.h" />
+    <ClInclude Include="cpp17\cpp_primer_5th_exercise\CExercise_Chapter_10.h" />
+    <ClInclude Include="cpp17\cpp_primer_5th_exercise\CStartExecise.h" />
+    <ClInclude Include="cpp17\CReference.h" />
+    <ClInclude Include="cpp17\CStart.h" />
+    <ClInclude Include="cpp17\CSTL.h" />
+    <ClInclude Include="cpp17\CSyntax.h" />
+    <ClInclude Include="cpp17\CThread.h" />
     <ClInclude Include="inc.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

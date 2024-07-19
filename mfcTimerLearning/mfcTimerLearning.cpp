@@ -6,6 +6,7 @@
 #include "framework.h"
 #include "mfcTimerLearning.h"
 #include "mfcTimerLearningDlg.h"
+#include "CLanguageFunctionTest.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -28,6 +29,8 @@ CMfcTimerLearningApp::CMfcTimerLearningApp()
 
 	// TODO: 在此处添加构造代码，
 	// 将所有重要的初始化放置在 InitInstance 中
+	CLanguageFunctionTest test;
+	test.Start();
 }
 
 

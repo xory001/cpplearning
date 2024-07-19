@@ -1,6 +1,6 @@
 #include "COperator.h"
 #include <iostream>
-#include "inc.h"
+#include "../inc.h"
 #include <string.h>
 
 namespace nsoperator

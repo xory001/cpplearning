@@ -13,81 +13,87 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="cpp14">
+    <Filter Include="cpp17">
       <UniqueIdentifier>{c7e9c602-e741-4e2d-9fec-89b60cb22cbe}</UniqueIdentifier>
     </Filter>
-    <Filter Include="cpp14\cpp_primer_5th_exercise">
-      <UniqueIdentifier>{dd54e225-6761-4a0a-bbe4-582f7004d7f0}</UniqueIdentifier>
+    <Filter Include="cpp17\cpp_primer_5th_exercise">
+      <UniqueIdentifier>{6bc70e77-ce89-487c-9da7-f219f89ce653}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="cpp14\CInitType.cpp">
-      <Filter>cpp14</Filter>
+    <ClCompile Include="cpp17\CFunctionExample.cpp">
+      <Filter>cpp17</Filter>
     </ClCompile>
-    <ClCompile Include="cpp14\CThread.cpp">
-      <Filter>cpp14</Filter>
+    <ClCompile Include="cpp17\CInitType.cpp">
+      <Filter>cpp17</Filter>
     </ClCompile>
-    <ClCompile Include="cpp14\CSyntax.cpp">
-      <Filter>cpp14</Filter>
+    <ClCompile Include="cpp17\COperator.cpp">
+      <Filter>cpp17</Filter>
     </ClCompile>
-    <ClCompile Include="cpp14\CSTL.cpp">
-      <Filter>cpp14</Filter>
+    <ClCompile Include="cpp17\CPointer.cpp">
+      <Filter>cpp17</Filter>
     </ClCompile>
-    <ClCompile Include="cpp14\CPointer.cpp">
-      <Filter>cpp14</Filter>
+    <ClCompile Include="cpp17\CReference.cpp">
+      <Filter>cpp17</Filter>
     </ClCompile>
-    <ClCompile Include="cpp14\CStart.cpp">
-      <Filter>cpp14</Filter>
+    <ClCompile Include="cpp17\CStart.cpp">
+      <Filter>cpp17</Filter>
     </ClCompile>
-    <ClCompile Include="cpp14\CReference.cpp">
-      <Filter>cpp14</Filter>
+    <ClCompile Include="cpp17\CSTL.cpp">
+      <Filter>cpp17</Filter>
     </ClCompile>
-    <ClCompile Include="cpp14\CFunctionExample.cpp">
-      <Filter>cpp14</Filter>
+    <ClCompile Include="cpp17\CSyntax.cpp">
+      <Filter>cpp17</Filter>
     </ClCompile>
-    <ClCompile Include="cpp14\cpp_primer_5th_exercise\CStartExecise.cpp">
-      <Filter>cpp14\cpp_primer_5th_exercise</Filter>
+    <ClCompile Include="cpp17\CThread.cpp">
+      <Filter>cpp17</Filter>
     </ClCompile>
-    <ClCompile Include="cpp14\cpp_primer_5th_exercise\CExercise_Chapter_10.cpp">
-      <Filter>cpp14\cpp_primer_5th_exercise</Filter>
+    <ClCompile Include="cpp17\cpp_primer_5th_exercise\CExercise_Chapter_10.cpp">
+      <Filter>cpp17\cpp_primer_5th_exercise</Filter>
+    </ClCompile>
+    <ClCompile Include="cpp17\cpp_primer_5th_exercise\CStartExecise.cpp">
+      <Filter>cpp17\cpp_primer_5th_exercise</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="cpp14\CInitType.h">
-      <Filter>cpp14</Filter>
-    </ClInclude>
-    <ClInclude Include="cpp14\CThread.h">
-      <Filter>cpp14</Filter>
-    </ClInclude>
-    <ClInclude Include="cpp14\CSyntax.h">
-      <Filter>cpp14</Filter>
-    </ClInclude>
-    <ClInclude Include="cpp14\CSTL.h">
-      <Filter>cpp14</Filter>
-    </ClInclude>
-    <ClInclude Include="cpp14\CPointer.h">
-      <Filter>cpp14</Filter>
-    </ClInclude>
-    <ClInclude Include="cpp14\CStart.h">
-      <Filter>cpp14</Filter>
-    </ClInclude>
-    <ClInclude Include="cpp14\CReference.h">
-      <Filter>cpp14</Filter>
-    </ClInclude>
-    <ClInclude Include="cpp14\CFunctionExample.h">
-      <Filter>cpp14</Filter>
-    </ClInclude>
-    <ClInclude Include="cpp14\cpp_primer_5th_exercise\CStartExecise.h">
-      <Filter>cpp14\cpp_primer_5th_exercise</Filter>
-    </ClInclude>
-    <ClInclude Include="cpp14\cpp_primer_5th_exercise\CExercise_Chapter_10.h">
-      <Filter>cpp14\cpp_primer_5th_exercise</Filter>
-    </ClInclude>
     <ClInclude Include="inc.h">
       <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp17\CFunctionExample.h">
+      <Filter>cpp17</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp17\CInitType.h">
+      <Filter>cpp17</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp17\COperator.h">
+      <Filter>cpp17</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp17\CPointer.h">
+      <Filter>cpp17</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp17\CReference.h">
+      <Filter>cpp17</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp17\CStart.h">
+      <Filter>cpp17</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp17\CSTL.h">
+      <Filter>cpp17</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp17\CSyntax.h">
+      <Filter>cpp17</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp17\CThread.h">
+      <Filter>cpp17</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp17\cpp_primer_5th_exercise\CExercise_Chapter_10.h">
+      <Filter>cpp17\cpp_primer_5th_exercise</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp17\cpp_primer_5th_exercise\CStartExecise.h">
+      <Filter>cpp17\cpp_primer_5th_exercise</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
