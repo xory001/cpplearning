@@ -44,6 +44,7 @@ namespace cpp17
         void Lambda();
         void Decltype();
         CSyntax_ReturnValOptimi ReturnValueOptimization(); //RVO, vs2019 can not be closed, use it by default
+        CSyntax_ReturnValOptimi ReturnValueOptimization( int nVal ); //RVO, vs2019 can not be closed, use it by default
     };
 }
 

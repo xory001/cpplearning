@@ -1,4 +1,5 @@
 #include <iostream>
+#include <exception>
 #include "CSyntax.h"
 #include "../inc.h"
 
@@ -55,6 +56,9 @@ namespace cpp17
     {
         CSyntax_ReturnValOptimi retVal = ReturnValueOptimization();
         retVal.Display();
+        TRACE_INFO_THIS( "----------call ReturnValueOptimization( 1 )" );
+        CSyntax_ReturnValOptimi retVal1 = ReturnValueOptimization( 1 );
+        retVal1.Display();
 
         system( "pause" );
 
@@ -113,6 +117,20 @@ namespace cpp17
         //vs2019 has no effect for /Zc:nrvo- 
         CSyntax_ReturnValOptimi retVal{ 1, "a" };
         return retVal;
+    }
+
+    CSyntax_ReturnValOptimi CSyntax::ReturnValueOptimization( int nVal )
+    {
+        if ( nVal )
+        {
+            CSyntax_ReturnValOptimi rvo1{ nVal, "1" };
+            return rvo1;
+        }
+        else
+        {
+            CSyntax_ReturnValOptimi rvo0{ nVal, "0" };
+            return rvo0;
+        }
     }
 
 }
