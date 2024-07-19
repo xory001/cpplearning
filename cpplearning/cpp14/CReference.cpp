@@ -2,7 +2,7 @@
 #include "CReference.h"
 
 
-namespace cpp14
+namespace cpp17
 { 
     void InitReference()
     {

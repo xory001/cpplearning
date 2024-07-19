@@ -1,7 +1,7 @@
 #pragma once
 #include "..\inc.h"
 
-namespace cpp14
+namespace cpp17
 {
     void InitThread();
 
@@ -20,7 +20,7 @@ namespace cpp14
     };
 
     template<typename T>
-    auto cpp14::CThread::Add(T&& a, T&& b)
+    auto cpp17::CThread::Add(T&& a, T&& b)
     {
         TRACE_INFO_THIS("a.type = " << typeid(a).name() );
         return a + b;

@@ -2,7 +2,7 @@
 #include "../inc.h"
 #include <thread>
 
-namespace cpp14
+namespace cpp17
 {
     struct ThreadExecutor {
         void operator()() { /***/ }
@@ -10,7 +10,7 @@ namespace cpp14
 
     void InitThread()
     {
-        std::thread trd_1(ThreadExecutor()); // 1) 声明了函数
+        std::thread trd_1(ThreadExecutor()); // 1) 申明函数， c++ 推导规格：如果可以推导成函数申明，则必须推导成函数申明
         std::thread trd_2(ThreadExecutor{}); // 2) 创建了子线程
         std::thread trd_3{ ThreadExecutor{} }; // 3)
 

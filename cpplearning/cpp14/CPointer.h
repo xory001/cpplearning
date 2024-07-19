@@ -1,6 +1,6 @@
 #pragma once
 
-namespace cpp14
+namespace cpp17
 {
 
 	bool InitPointer();

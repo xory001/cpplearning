@@ -15,7 +15,7 @@ int main()
     strcat(szBuf, "\\xlog.cfg");
     xlog::CLogMgr::Inst()->SetConfig( szBuf );
     RunTest();
-    cpp14::Start();
+    cpp17::Start();
     std::cout << "exit!\n";
     return 0;
 }

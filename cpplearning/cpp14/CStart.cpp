@@ -3,28 +3,31 @@
 #include "CInitType.h"
 #include "CThread.h"
 #include <thread>
-#include "CGramma.h"
+#include "CSyntax.h"
 #include "CSTL.h"
 #include "CPointer.h"
 #include "CReference.h"
 #include "CFunctionExample.h"
 #include "cpp_primer_5th_exercise/CStartExecise.h"
 
-namespace cpp14
+namespace cpp17
 {
     void Start()
     {
-        cpp_primer_5th_exercise::StartExecise();
+        //cpp_primer_5th_exercise::StartExecise();
+        CSTL stl;
+        stl.Start();
+        return;
         StartGramma();
         InitFunctionExample();
-        return;
+        //return;
         InitReference();
-        return;
+        //return;
         InitThread();
         InitType(); //value init & default init
         InitPointer();
         
-        CSTL_Init();
+        
     }
 }
 

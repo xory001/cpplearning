@@ -1,8 +1,8 @@
 #include <iostream>
-#include "CGramma.h"
+#include "CSyntax.h"
 #include "../inc.h"
 
-namespace cpp14
+namespace cpp17
 {
     class A 
     {

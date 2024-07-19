@@ -30,7 +30,7 @@
     <ClCompile Include="cpp14\CThread.cpp">
       <Filter>cpp14</Filter>
     </ClCompile>
-    <ClCompile Include="cpp14\CGramma.cpp">
+    <ClCompile Include="cpp14\CSyntax.cpp">
       <Filter>cpp14</Filter>
     </ClCompile>
     <ClCompile Include="cpp14\CSTL.cpp">
@@ -62,7 +62,7 @@
     <ClInclude Include="cpp14\CThread.h">
       <Filter>cpp14</Filter>
     </ClInclude>
-    <ClInclude Include="cpp14\CGramma.h">
+    <ClInclude Include="cpp14\CSyntax.h">
       <Filter>cpp14</Filter>
     </ClInclude>
     <ClInclude Include="cpp14\CSTL.h">

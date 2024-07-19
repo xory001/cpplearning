@@ -2,11 +2,11 @@
 #include "CInitType.h"
 #include "CThread.h"
 #include <thread>
-#include "CGramma.h"
+#include "CSyntax.h"
 #include "CSTL.h"
 #include "CPointer.h"
 
-namespace cpp14
+namespace cpp17
 {
     void InitType()
     {

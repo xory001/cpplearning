@@ -2,7 +2,7 @@
 #include "CPointer.h"
 #include <memory>
 
-namespace cpp14
+namespace cpp17
 {
     void freePointer(CPointer* p)
     {
