@@ -1,4 +1,5 @@
 #pragma once
+#include "CSTLThreadMutex.h"
 
 class CSTL
 {
@@ -17,5 +18,8 @@ protected:
     //deleter
     template< typename T>
     static bool deleteArr( T* t );
+
+private:
+    CSTLThreadMutex m_threadMutex;
 };
 

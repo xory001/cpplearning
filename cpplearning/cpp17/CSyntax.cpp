@@ -54,9 +54,30 @@ namespace cpp17
 
     void CSyntax::Start()
     {
+        /*
+        2024.07.22 10:13:25.214 INFO    [t=2424][this=0x0000005CD295ED98]
+        [cpp17::CSyntax_ReturnValOptimi::CSyntax_ReturnValOptimi:29][m_nIntVal = 1, m_strVal = a]
+
+        2024.07.22 10:13:25.217 INFO    [t=2424][this=0x0000005CD295ED98]
+        [cpp17::CSyntax_ReturnValOptimi::~CSyntax_ReturnValOptimi:34][]
+
+        2024.07.22 10:13:25.220 INFO    [t=2424][this=0x0000005CD295EF48]
+        [cpp17::CSyntax_ReturnValOptimi::Display:39][m_nIntVal = 1, m_strVal = a]
+        */
         CSyntax_ReturnValOptimi retVal = ReturnValueOptimization();
         retVal.Display();
         TRACE_INFO_THIS( "----------call ReturnValueOptimization( 1 )" );
+
+        /*
+        2024.07.22 10:13:25.226 INFO    [t=2424][this=0x0000005CD295ED08]
+        [cpp17::CSyntax_ReturnValOptimi::CSyntax_ReturnValOptimi:29][m_nIntVal = 1, m_strVal = 1]
+
+        2024.07.22 10:13:25.230 INFO    [t=2424][this=0x0000005CD295ED08]
+        [cpp17::CSyntax_ReturnValOptimi::~CSyntax_ReturnValOptimi:34][]
+
+        2024.07.22 10:13:25.234 INFO    [t=2424][this=0x0000005CD295EF98]
+        [cpp17::CSyntax_ReturnValOptimi::Display:39][m_nIntVal = 1, m_strVal = 1]
+        */
         CSyntax_ReturnValOptimi retVal1 = ReturnValueOptimization( 1 );
         retVal1.Display();
 

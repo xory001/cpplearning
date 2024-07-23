@@ -19,6 +19,9 @@
     <Filter Include="cpp17\cpp_primer_5th_exercise">
       <UniqueIdentifier>{6bc70e77-ce89-487c-9da7-f219f89ce653}</UniqueIdentifier>
     </Filter>
+    <Filter Include="utils">
+      <UniqueIdentifier>{702523a2-84f9-45d1-9f06-f57363756862}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -57,6 +60,12 @@
     <ClCompile Include="cpp17\cpp_primer_5th_exercise\CStartExecise.cpp">
       <Filter>cpp17\cpp_primer_5th_exercise</Filter>
     </ClCompile>
+    <ClCompile Include="cpp17\CSTLThreadMutex.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\CRAIIThread.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="inc.h">
@@ -94,6 +103,12 @@
     </ClInclude>
     <ClInclude Include="cpp17\cpp_primer_5th_exercise\CStartExecise.h">
       <Filter>cpp17\cpp_primer_5th_exercise</Filter>
+    </ClInclude>
+    <ClInclude Include="cpp17\CSTLThreadMutex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\CRAIIThread.h">
+      <Filter>utils</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

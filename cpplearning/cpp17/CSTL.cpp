@@ -8,6 +8,7 @@
 #include <unordered_map>
 #include <vector>
 
+
 #include "CSTL.h"
 #include "../inc.h"
 
@@ -23,6 +24,10 @@ CSTL::~CSTL()
 
 void CSTL::Start()
 {
+    m_threadMutex.Start();
+    Sleep( 1000 * 2 );
+    return;
+
     any();
     share_ptr();
     CSTL_StringBuf();

@@ -157,9 +157,11 @@
     <ClCompile Include="cpp17\CReference.cpp" />
     <ClCompile Include="cpp17\CStart.cpp" />
     <ClCompile Include="cpp17\CSTL.cpp" />
+    <ClCompile Include="cpp17\CSTLThreadMutex.cpp" />
     <ClCompile Include="cpp17\CSyntax.cpp" />
     <ClCompile Include="cpp17\CThread.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="utils\CRAIIThread.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cpp17\CFunctionExample.h" />
@@ -171,9 +173,11 @@
     <ClInclude Include="cpp17\CReference.h" />
     <ClInclude Include="cpp17\CStart.h" />
     <ClInclude Include="cpp17\CSTL.h" />
+    <ClInclude Include="cpp17\CSTLThreadMutex.h" />
     <ClInclude Include="cpp17\CSyntax.h" />
     <ClInclude Include="cpp17\CThread.h" />
     <ClInclude Include="inc.h" />
+    <ClInclude Include="utils\CRAIIThread.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
