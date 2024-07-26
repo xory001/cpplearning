@@ -12,6 +12,12 @@
 #include "CSTL.h"
 #include "../inc.h"
 
+
+void CSTL_A::Display()
+{
+    TRACE_INFO_THIS( "nVal = " << nVal << ", szBuf = " << szBuf );
+}
+
 CSTL::CSTL()
 {
 
@@ -26,7 +32,7 @@ void CSTL::Start()
 {
     m_threadMutex.Start();
     Sleep( 1000 * 2 );
-    return;
+    //return;
 
     any();
     share_ptr();
@@ -35,6 +41,20 @@ void CSTL::Start()
 
 void CSTL::share_ptr()
 {
+    {
+        //share_ptr =
+        TRACE_INFO_THIS( "------start share_ptr *=" );
+        CSTL_A a1 = { 10, "abc"};
+        a1.Display();
+        std::shared_ptr<CSTL_A> a2 = std::make_shared<CSTL_A>();
+        a2->nVal = 20;
+        strcpy_s( a2->szBuf, 32, "efg" );
+        a2->Display();
+        *a2 = a1;
+        a2->Display();
+        system( "PAUSE" );
+    }
+
     {
         // 1. test arr init;
         char* pBuf1 = new char[8]; //pBuf1 is all 0xcd

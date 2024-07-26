@@ -1,6 +1,16 @@
 #pragma once
 #include "CSTLThreadMutex.h"
 
+class CSTL_A
+{
+public:
+    void Display();
+
+public:
+    int nVal = 0;
+    char szBuf[32] = { 0 };
+};
+
 class CSTL
 {
 public:

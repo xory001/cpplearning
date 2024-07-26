@@ -35,4 +35,11 @@ namespace cpp17
         TRACE_INFO("s1rr = " << s1rr);
     }
 
+    std::thread Swap( std::thread&& t )
+    {
+        std::thread t1;
+        //t1 = t;
+        return t1;
+    }
+
 }
